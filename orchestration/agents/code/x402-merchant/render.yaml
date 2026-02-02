@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: x402-merchant-agent-intel
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4020
+      - key: MERCHANT_ADDRESS
+        value: 0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055
+    healthCheckPath: /health
+    autoDeploy: true
