@@ -1,0 +1,29 @@
+{
+  "_description": "Sample Basic Tier Intel Report",
+  "reportId": "intel-1738517715842-a7x9m2k5p",
+  "timestamp": "2025-02-02T18:15:15.842Z",
+  "tier": "basic",
+  "topic": "DeFi Archaeology: Uncovering Hidden Yield",
+  "merchant": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055",
+  "generatedBy": "CLAUDIA Agent Intel Service",
+  "disclaimer": "This report is generated for agent consumption. Verify all data before making decisions.",
+  "type": "quick_summary",
+  "summary": "Quick intelligence summary on \"DeFi Archaeology: Uncovering Hidden Yield\"",
+  "keyPoints": [
+    "Market shows moderate interest in topic",
+    "Recent developments indicate growing adoption",
+    "Key players remain consistent with previous period"
+  ],
+  "sources": [
+    {
+      "name": "Web Search",
+      "count": 5
+    },
+    {
+      "name": "News Feeds",
+      "count": 3
+    }
+  ],
+  "estimatedReadTime": "2 minutes",
+  "confidenceScore": 0.75
+}
