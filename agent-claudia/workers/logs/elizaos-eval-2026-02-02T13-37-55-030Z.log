@@ -1,0 +1,9 @@
+/bin/sh: line 144: agent-meditation-practice.md: command not found
+/bin/sh: line 144: cron-research-schedule.md: command not found
+/bin/sh: line 144: memory/2026-02-01-agent-social-ecosystem.md: No such file or directory
+/bin/sh: line 144: memory/2026-02-01-clawk-registration.md: No such file or directory
+/bin/sh: line 144: claude-sonnet-4-5: command not found
+/bin/sh: line 144: /Users/clawdbot/.cache/qmd/index.sqlite: Permission denied
+Usage: qmd search [options] <query>
+Usage: qmd vsearch [options] <query>
+Usage: qmd query [options] <query>
