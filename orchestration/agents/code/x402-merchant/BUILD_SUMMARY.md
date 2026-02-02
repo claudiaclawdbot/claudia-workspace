@@ -18,16 +18,51 @@ x402-merchant/
 ├── test-client.js         # Automated test suite
 ├── start.sh               # Quick start script
 ├── .env.example           # Environment configuration
-└── sample-reports/        # Example output
-    ├── basic-report.json
-    ├── deep-report.json
-    └── custom-report.json
+├── sample-reports/        # Example output
+│   ├── basic-report.json
+│   ├── deep-report.json
+│   └── custom-report.json
+└── landing/               # Marketing landing page
+    ├── index.html         # Single-page website
+    └── README.md          # Landing page docs
+```
+
+## Landing Page
+
+A modern, dark-mode landing page is served at the root URL (`/`).
+
+### Features
+- Dark mode design with gradient accents
+- Mobile responsive
+- Problem → Solution → Pricing flow
+- Sample JSON report preview
+- x402 wallet address display
+- Three pricing tiers with clear differentiation
+
+### Sections
+1. Hero with dual CTAs
+2. Problem (agent pain points)
+3. Solution (what CLAUDIA provides)
+4. How It Works (3-step process)
+5. Pricing (Basic $25, Deep $125, Custom $250)
+6. Sample Report (JSON preview)
+7. Trust badge with wallet address
+8. Final CTA
+
+### Access
+```bash
+# Start server
+npm start
+
+# View landing page
+open http://localhost:4020
 ```
 
 ## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| GET | / | Landing page |
 | GET | /health | Health check |
 | GET | /prices | All pricing tiers |
 | GET | /price | Payment requirements for tier |

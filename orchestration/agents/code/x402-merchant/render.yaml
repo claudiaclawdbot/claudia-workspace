@@ -4,14 +4,14 @@ services:
     runtime: node
     plan: free
     region: oregon
-    branch: main
     buildCommand: npm install
     startCommand: node server.js
+    rootDir: orchestration/agents/code/x402-merchant
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 4020
+        value: 10000
       - key: MERCHANT_ADDRESS
         value: 0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055
     healthCheckPath: /health

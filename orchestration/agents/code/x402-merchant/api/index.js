@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 import { verifyMessage, parseUnits, formatUnits } from 'viem';
-import { sepolia, baseSepolia } from 'viem/chains';
+import { sepolia, baseSepolia, base } from 'viem/chains';
 
 config();
 
@@ -26,6 +26,12 @@ const SUPPORTED_NETWORKS = {
     name: 'Sepolia',
     chain: sepolia,
     usdcAddress: '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238',
+    usdcDecimals: 6
+  },
+  'eip155:8453': {
+    name: 'Base Mainnet',
+    chain: base,
+    usdcAddress: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
     usdcDecimals: 6
   }
 };

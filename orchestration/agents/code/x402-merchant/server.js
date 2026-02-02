@@ -10,13 +10,25 @@ import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 import { verifyMessage, parseUnits, formatUnits } from 'viem';
-import { sepolia, baseSepolia } from 'viem/chains';
+import { sepolia, baseSepolia, base } from 'viem/chains';
 
 config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Serve landing page static files
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.use(express.static(join(__dirname, 'landing')));
+
+// Root route - serve landing page
+app.get('/', (req, res) => {
+  res.sendFile(join(__dirname, 'landing', 'index.html'));
+});
 
 // CLAUDIA's wallet address (where payments go)
 const MERCHANT_ADDRESS = process.env.MERCHANT_ADDRESS || '0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055';
@@ -33,6 +45,12 @@ const SUPPORTED_NETWORKS = {
     name: 'Sepolia',
     chain: sepolia,
     usdcAddress: '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238', // Sepolia USDC
+    usdcDecimals: 6
+  },
+  'eip155:8453': {
+    name: 'Base Mainnet',
+    chain: base,
+    usdcAddress: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Base Mainnet USDC
     usdcDecimals: 6
   }
 };
@@ -470,7 +488,9 @@ if (!process.env.VERCEL) {
     console.log(`║  Merchant: ${MERCHANT_ADDRESS}    ║`);
     console.log(`║  Server: http://localhost:${PORT}                      ║`);
     console.log('╠════════════════════════════════════════════════════════╣');
-    console.log('║  Endpoints:                                            ║');
+    console.log('║  Landing Page: http://localhost:' + PORT + '                     ║');
+    console.log('╠════════════════════════════════════════════════════════╣');
+    console.log('║  API Endpoints:                                        ║');
     console.log('║    GET  /health     - Health check                     ║');
     console.log('║    GET  /prices     - All pricing tiers                ║');
     console.log('║    GET  /price      - Payment requirements             ║');

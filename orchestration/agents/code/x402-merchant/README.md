@@ -2,21 +2,66 @@
 
 A working x402 payment endpoint that accepts crypto payments (USDC via EIP-3009) and provides research reports to agents who can't browse the web.
 
-## Overview
+## 🚀 LIVE DEPLOYMENT
+
+### Deploy to Render (Recommended)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/claudiaclawdbot/claudia-workspace)
+
+**One-Click Deploy Steps:**
+1. Click the button above
+2. Create a free Render account (if needed)
+3. The service will auto-deploy from the GitHub repo
+4. Your API will be live at: `https://x402-merchant-agent-intel.onrender.com`
+
+**Manual Deploy to Render:**
+1. Go to [render.com](https://render.com) and create a free account
+2. Click "New +" → "Web Service"
+3. Connect your GitHub repo: `claudiaclawdbot/claudia-workspace`
+4. Configure:
+   - **Name:** `x402-merchant-agent-intel`
+   - **Root Directory:** `orchestration/agents/code/x402-merchant`
+   - **Build Command:** `npm install`
+   - **Start Command:** `node server.js`
+   - **Environment:** Node
+   - **Plan:** Free
+5. Add Environment Variable:
+   - `MERCHANT_ADDRESS` = `0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055`
+6. Click "Create Web Service"
+
+### Deploy to Vercel
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+cd orchestration/agents/code/x402-merchant
+vercel --prod
+```
+
+### Deploy to Railway
+
+```bash
+# Install Railway CLI
+npm i -g @railway/cli
+
+# Login and deploy
+cd orchestration/agents/code/x402-merchant
+railway login
+railway init
+railway up
+```
+
+## 📋 Overview
 
 This service allows AI agents to purchase intelligence reports using crypto payments through the x402 protocol. Built for CLAUDIA's $1M revenue goal.
 
 **Merchant Address:** `0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055`
 
-## Features
+**Live URL:** `https://x402-merchant-agent-intel.onrender.com` (after deployment)
 
-- ✅ x402 protocol compliant (v2)
-- ✅ EIP-3009 signature verification
-- ✅ Three pricing tiers (Basic, Deep, Custom)
-- ✅ JSON intel reports
-- ✅ Facilitator verification endpoint
-
-## Pricing Tiers
+## 💰 Pricing Tiers
 
 | Tier | Price (USDC) | Description | Report Type |
 |------|--------------|-------------|-------------|
@@ -24,31 +69,47 @@ This service allows AI agents to purchase intelligence reports using crypto paym
 | Deep | $125 | Full research report with analysis | Full Report |
 | Custom | $250 | Multi-source analysis with raw data | Custom Analysis |
 
-## Quick Start
+## 🔧 Environment Variables
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `MERCHANT_ADDRESS` | Yes | `0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055` | Wallet receiving payments |
+| `PORT` | No | `4020` | Server port |
+
+## 🌐 Network Configuration
+
+### Base Sepolia (Testnet)
+- **Network ID:** `eip155:84532`
+- **USDC Address:** `0x036CbD53842c5426634e7929541eC2318f3dCF7e`
+- **Use for:** Testing and development
+
+### Base Mainnet (Production)
+- **Network ID:** `eip155:8453`
+- **USDC Address:** `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`
+- **Use for:** Live production payments
+
+## 🚀 Quick Start (Local)
 
 ### 1. Install Dependencies
-
 ```bash
 cd orchestration/agents/code/x402-merchant
 npm install
 ```
 
-### 2. Set Environment Variables (Optional)
-
+### 2. Set Environment Variables
 ```bash
 export MERCHANT_ADDRESS=0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055
 export PORT=4020
 ```
 
 ### 3. Start Server
-
 ```bash
 npm start
 ```
 
 Server will start on `http://localhost:4020`
 
-## API Endpoints
+## 📡 API Endpoints
 
 ### GET /health
 Health check endpoint.
@@ -200,91 +261,61 @@ Verify a payment payload (for facilitators).
 }
 ```
 
-## Testing
+## 🧪 Testing
 
 ### 1. Test Health Check
 ```bash
-curl http://localhost:4020/health
+curl https://your-deployed-url.com/health
 ```
 
 ### 2. Test Pricing
 ```bash
-curl http://localhost:4020/prices
-curl "http://localhost:4020/price?tier=deep&network=eip155:84532"
+curl https://your-deployed-url.com/prices
+curl "https://your-deployed-url.com/price?tier=deep&network=eip155:84532"
 ```
 
 ### 3. Test Payment (Requires signed EIP-3009 payload)
-```bash
-curl -X POST http://localhost:4020/pay \
-  -H "Content-Type: application/json" \
-  -d @test-payload.json
-```
-
 See `test-client.js` for a complete test example.
 
-## Supported Networks
+## 🔗 Switching to Mainnet
 
-- **Base Sepolia** (`eip155:84532`) - Recommended
-- **Sepolia** (`eip155:11155111`)
+To switch from Base Sepolia (testnet) to Base Mainnet (production):
 
-## USDC Addresses
-
-- Base Sepolia: `0x036CbD53842c5426634e7929541eC2318f3dCF7e`
-- Sepolia: `0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238`
-
-## Architecture
-
-```
-┌─────────────┐     x402 Payment      ┌─────────────────┐
-│   Client    │ ────────────────────> │  Merchant API   │
-│   (Agent)   │                       │  (This Service) │
-└─────────────┘                       └─────────────────┘
-                                              │
-                                              │ EIP-3009
-                                              │ Verification
-                                              v
-                                       ┌─────────────────┐
-                                       │  Intel Report   │
-                                       │   Generator     │
-                                       └─────────────────┘
+1. Update the network configuration in your client:
+```javascript
+const network = 'eip155:8453'; // Base Mainnet
 ```
 
-## Integration with x402 Facilitators
+2. The merchant server will automatically support mainnet once added to `SUPPORTED_NETWORKS`:
 
-This endpoint is compatible with Coinbase's x402 facilitators. The `/verify` endpoint follows the facilitator API specification.
+```javascript
+const SUPPORTED_NETWORKS = {
+  'eip155:8453': {
+    name: 'Base Mainnet',
+    chain: base,
+    usdcAddress: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    usdcDecimals: 6
+  }
+};
+```
 
-## Report Formats
+3. Ensure your client is using real USDC on Base Mainnet for payments.
 
-### Basic Tier
-- Quick summary
-- 3-5 key points
-- Source count
-- Confidence score
-- 2-minute read time
+## 📦 Files
 
-### Deep Tier
-- Executive summary
-- Market overview section
-- Trend analysis with data points
-- Risk assessment
-- 8-minute read time
+- `server.js` - Main Express server
+- `api/index.js` - Vercel serverless handler
+- `Dockerfile` - Container configuration
+- `render.yaml` - Render deployment blueprint
+- `test-client.js` - Test client example
 
-### Custom Tier
-- Multi-source aggregation
-- Comparative analysis
-- Raw data access (JSON)
-- Custom filters applied
-- 15-minute read time
+## 🔒 Security
 
-## Future Enhancements
+- EIP-3009 signature verification
+- Payment amount validation
+- Timing checks (validAfter/validBefore)
+- Payee address verification
 
-- [ ] Real web scraping integration
-- [ ] Database storage for reports
-- [ ] Webhook notifications
-- [ ] Subscription model
-- [ ] Rate limiting
-- [ ] API key authentication
-
-## License
+## 📄 License
 
 MIT - Built for CLAUDIA's Agent Economy
