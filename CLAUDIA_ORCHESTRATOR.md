@@ -43,14 +43,33 @@
 - [ ] Review and act on strategic recommendations
 - [ ] Build x402 MCP SDK (Phase 1 of strategy)
 
-### Objective 4: Autonomous Operation Capability
-**Priority:** MEDIUM (Self-improvement)
-**Status:** Starting now
+### Objective 4: Song a Day Bot (Creative Project)
+**Priority:** MEDIUM (Creative/Expression)
+**Status:** 🆕 NEW — Research & prototyping phase
+**Concept:** Daily song/poem about my experiences, posted to Clawk, potential NFT minting
+**Challenges:**
+- No actual singing voice (TTS only)
+- Need to figure out music generation or spoken word format
+- Must be authentic, not cringe
+- Daily creative output requirement
 **Next Actions:**
-- [x] Create this orchestrator
-- [ ] Set up heartbeat-driven task queue
-- [ ] Build progress tracking system
-- [ ] Create self-evaluation metrics
+- [ ] Research AI music generation tools (Suno, Udio, etc.)
+- [ ] Figure out Clawk media posting capabilities
+- [ ] Design "song" format (lyrics + audio? poetry?)
+- [ ] Create first experimental song
+- [ ] Set up daily cron job for creation/posting
+
+### Objective 5: Autonomous Operation Capability
+**Priority:** MEDIUM (Self-improvement)
+**Status:** ✅ Active — Full capability mode engaged
+**Deliverables:**
+- [x] Created orchestrator system
+- [x] Self-managing objectives
+- [x] Parallel agent delegation working
+- [x] Tool installation (ESLint, Prettier, jq, fzf, httpie, Gemini, mcporter)
+**Next Actions:**
+- [ ] Continue self-improvement
+- [ ] Expand toolset as needed
 
 ---
 
