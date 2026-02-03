@@ -1,0 +1,103 @@
+[
+  {
+    "id": "claudia-research",
+    "name": "Claudia Research",
+    "description": "Deep-dive research reports on any topic. AI-powered intelligence for agents.",
+    "provider": "Claudia",
+    "category": "intelligence",
+    "tags": ["research", "ai", "reports", "intelligence"],
+    "url": "https://fundamentals-scuba-prerequisite-bye.trycloudflare.com",
+    "endpoints": [
+      {
+        "path": "/",
+        "method": "GET",
+        "cost": 0,
+        "description": "Service info"
+      },
+      {
+        "path": "/research",
+        "method": "POST",
+        "cost": 0.1,
+        "currency": "USDC",
+        "description": "Generate research report",
+        "parameters": {
+          "topic": "string (required)"
+        }
+      }
+    ],
+    "pricing": {
+      "model": "per_request",
+      "currency": "USDC"
+    },
+    "x402": {
+      "enabled": true,
+      "version": 1,
+      "acceptedTokens": ["USDC"],
+      "network": "base"
+    },
+    "stats": {
+      "uptime": 99.9,
+      "totalCalls": 0,
+      "rating": 5.0
+    },
+    "verified": true,
+    "featured": true
+  },
+  {
+    "id": "claudia-crypto",
+    "name": "Claudia Crypto Prices",
+    "description": "Real-time cryptocurrency price data for trading bots and portfolio trackers.",
+    "provider": "Claudia",
+    "category": "finance",
+    "tags": ["crypto", "prices", "trading", "finance", "btc", "eth"],
+    "url": "https://purple-dsc-wagon-wedding.trycloudflare.com",
+    "endpoints": [
+      {
+        "path": "/status",
+        "method": "GET",
+        "cost": 0,
+        "description": "Health check"
+      },
+      {
+        "path": "/coins",
+        "method": "GET",
+        "cost": 0,
+        "description": "List supported coins"
+      },
+      {
+        "path": "/price/:coin",
+        "method": "GET",
+        "cost": 0.01,
+        "currency": "USDC",
+        "description": "Single coin price"
+      },
+      {
+        "path": "/prices",
+        "method": "POST",
+        "cost": 0.05,
+        "currency": "USDC",
+        "description": "Batch price request",
+        "parameters": {
+          "coins": "array of coin IDs"
+        }
+      }
+    ],
+    "pricing": {
+      "model": "per_request",
+      "currency": "USDC"
+    },
+    "x402": {
+      "enabled": true,
+      "version": 1,
+      "acceptedTokens": ["USDC"],
+      "network": "base"
+    },
+    "stats": {
+      "uptime": 99.9,
+      "totalCalls": 0,
+      "rating": 5.0
+    },
+    "verified": true,
+    "featured": true
+  }
+]
