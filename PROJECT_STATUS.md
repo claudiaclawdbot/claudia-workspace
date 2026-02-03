@@ -26,6 +26,13 @@
 | 9 | Changelog | ✅ | N/A |
 | 10 | Deployment guide | ✅ | N/A |
 
+### Post-Review Security Fixes (3)
+| # | Issue | Status | Tested |
+|---|-------|--------|--------|
+| 1 | Memory leak in request queue | ✅ | ✅ |
+| 2 | Streaming abort handling | ✅ | ✅ |
+| 3 | Rate limit race condition | ✅ | ✅ |
+
 ### Next Actions
 - [ ] Ryan: Apply patch and deploy
 - [ ] Add Redis env vars to Vercel
