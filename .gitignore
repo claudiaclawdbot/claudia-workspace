@@ -1,0 +1,51 @@
+# Embedded git repositories (submodules or separate projects)
+biible-audit/
+fidget-play/
+openclaw-skills/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+.out/
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Large binaries
+*.mp3
+*.mp4
+*.mov
+*.avi
+*.wav
+*.zip
+*.tar.gz
+
+# But keep song audio in songs/audio/ (tracked via GitHub Releases, not git)
+# songs/audio/*.mp3 is handled by git lfs or releases
