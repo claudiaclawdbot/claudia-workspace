@@ -6,29 +6,29 @@
 
 ## 🔴 High Priority
 
-### HP3.1: Automated Name Violation Detection
-**Status:** ⏳ Pending  
-**Effort:** 2 hours  
-**Value:** Prevents accidental policy violations
+### HP3.1: Automated Name Violation Detection ✅ DONE
+**Status:** ✅ Complete  
+**Date:** 2026-02-04  
+**File:** `scripts/name-violation-check.sh`
 
-**Current State:** Manual grep checks  
-**Target State:** Automated daily scan with alerts
+**Features:**
+- Scans all text files for forbidden patterns
+- Generates markdown reports in `memory/alerts/`
+- Quick check mode for CI/CD
+- Full report mode with detailed findings
+- Configurable patterns and exclusions
 
-**Implementation:**
+**Usage:**
 ```bash
-# Create: scripts/name-violation-check.sh
-# 1. Run grep -r "forbidden_name" across all files
-# 2. Exclude: .git/, node_modules/, binary files
-# 3. Generate report: memory/alerts/name-violations-YYYY-MM-DD.md
-# 4. If violations found, create alert and notify
-# 5. Add to cron: daily at 6am
+./scripts/name-violation-check.sh              # Quick check
+./scripts/name-violation-check.sh --report     # Full report
 ```
 
 **Acceptance Criteria:**
-- [ ] Script created and tested
+- [x] Script created and tested
 - [ ] Daily cron job configured
-- [ ] Alert file format documented
-- [ ] First automated scan completed
+- [x] Alert file format documented
+- [x] First automated scan completed
 
 ---
 
