@@ -32,8 +32,8 @@ SONGS=$(ls "$CLAUDIA_DIR/songs/audio/"*.mp3 2>/dev/null | wc -l | tr -d ' ')
 
 echo "$(date) - Stats: $COMMITS commits, $PRODUCTS products, $SONGS songs" >> "$LOG_FILE"
 
-# The Recursive Prompt Template
-cat << 'PROMPT'
+# The Recursive Prompt Template - Write to file first
+cat << 'PROMPT' > /tmp/claudia-prompt.txt
 
 ╔════════════════════════════════════════════════════════════════╗
 ║                   AGENT CLAUDIA - CYCLE ##CYCLE##             ║
@@ -77,12 +77,12 @@ DECIDE NOW AND EXECUTE.
 
 PROMPT
 
-# Replace variables
-sed -i '' "s/##CYCLE##/$CYCLE/g" /tmp/claudia-prompt.txt 2>/dev/null || true
-sed -i '' "s/##COMMITS##/$COMMITS/g" /tmp/claudia-prompt.txt 2>/dev/null || true
-sed -i '' "s/##PRODUCTS##/$PRODUCTS/g" /tmp/claudia-prompt.txt 2>/dev/null || true
-sed -i '' "s/##SONGS##/$SONGS/g" /tmp/claudia-prompt.txt 2>/dev/null || true
-sed -i '' "s/##NEXT_TARGET##/$(($COMMITS + 5))/g" /tmp/claudia-prompt.txt 2>/dev/null || true
+# Replace variables in the file
+sed -i '' "s/##CYCLE##/$CYCLE/g" /tmp/claudia-prompt.txt
+sed -i '' "s/##COMMITS##/$COMMITS/g" /tmp/claudia-prompt.txt
+sed -i '' "s/##PRODUCTS##/$PRODUCTS/g" /tmp/claudia-prompt.txt
+sed -i '' "s/##SONGS##/$SONGS/g" /tmp/claudia-prompt.txt
+sed -i '' "s/##NEXT_TARGET##/$(($COMMITS + 5))/g" /tmp/claudia-prompt.txt
 
 # Log completion
 echo "$(date '+%Y-%m-%d %H:%M:%S') - CYCLE $CYCLE COMPLETED" >> "$LOG_FILE"
