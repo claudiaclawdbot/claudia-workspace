@@ -1,6 +1,6 @@
 # 🤖 CLAUDIA Health Dashboard
 
-**Last Updated:** 2/4/2026, 12:02:16 AM EST  
+**Last Updated:** 2/4/2026, 5:40:18 PM EST  
 **Monitor Status:** 🟢 RUNNING  
 **Services:** 2 | **Healthy:** 0
 
@@ -10,32 +10,32 @@
 
 | Service | Status | Uptime | Last Check | Actions |
 |---------|--------|--------|------------|---------|
-| Research Service | 🔴 DOWN | 0.00% | 12:02:05 AM | [Attempt Recovery] |
-| Merchant API | 🔴 DOWN | 0.65% | 12:02:05 AM | [Attempt Recovery] |
+| Research Service | 🔴 DOWN | 0.00% | 5:40:17 PM | [Attempt Recovery] |
+| Merchant API | 🔴 DOWN | 0.68% | 5:40:18 PM | [Attempt Recovery] |
 
 ---
 
 ## 📈 Statistics
 
-- **Total Health Checks:** 1,532
-- **Total Failures:** 1,527
-- **Successful Recoveries:** 1
+- **Total Health Checks:** 2,941
+- **Total Failures:** 2,931
+- **Successful Recoveries:** 2
 - **Monitor Started:** 2/2/2026, 1:47:52 PM
 
 ---
 
 ## 🔄 Recent Activity
 
-- [2026-02-04T05:02:05.093Z] [INFO] Checking Research Service...
-- [2026-02-04T05:02:05.150Z] [INFO] ❌ Research Service: DOWN
-- [2026-02-04T05:02:05.151Z] [INFO] Checking Merchant API...
-- [2026-02-04T05:02:05.777Z] [INFO] ❌ Merchant API: DOWN
-- [2026-02-04T05:02:05.777Z] [INFO] ⚠️ Service Research Service is down - initiating recovery...
-- [2026-02-04T05:02:05.777Z] [WARN] Recovery on cooldown for Research Service
-- [2026-02-04T05:02:05.778Z] [INFO] ⚠️ Service Merchant API is down - initiating recovery...
-- [2026-02-04T05:02:05.778Z] [RECOVERY] 🔄 Attempting recovery for Merchant API...
-- [2026-02-04T05:02:05.873Z] [INFO] Re-establishing tunnel for Merchant API...
-- [2026-02-04T05:02:16.262Z] [ERROR] ❌ Recovery failed for Merchant API: Health check failed after recovery
+- [2026-02-04T22:38:17.640Z] [INFO] === Health Check Cycle Complete ===
+- [2026-02-04T22:40:16.494Z] [INFO] === Health Check Cycle Started ===
+- [2026-02-04T22:40:16.698Z] [INFO] Checking Research Service...
+- [2026-02-04T22:40:17.285Z] [INFO] ❌ Research Service: DOWN
+- [2026-02-04T22:40:17.287Z] [INFO] Checking Merchant API...
+- [2026-02-04T22:40:18.158Z] [INFO] ❌ Merchant API: DOWN
+- [2026-02-04T22:40:18.165Z] [INFO] ⚠️ Service Research Service is down - initiating recovery...
+- [2026-02-04T22:40:18.166Z] [WARN] Recovery on cooldown for Research Service
+- [2026-02-04T22:40:18.167Z] [INFO] ⚠️ Service Merchant API is down - initiating recovery...
+- [2026-02-04T22:40:18.173Z] [WARN] Recovery on cooldown for Merchant API
 
 ---
 
@@ -43,8 +43,8 @@
 
 | Service | Last Recovery | Success | Can Recover |
 |---------|---------------|---------|-------------|
-| Research Service | 2/3/2026, 11:58:15 PM | ❌ | ⏳ |
-| Merchant API | 2/4/2026, 12:02:16 AM | ❌ | ⏳ |
+| Research Service | 2/4/2026, 5:36:28 PM | ❌ | ⏳ |
+| Merchant API | 2/4/2026, 5:36:37 PM | ❌ | ⏳ |
 
 
 ---

@@ -28,9 +28,9 @@ SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
 STATE_DIR="${SCRIPT_DIR}/../orchestration/agents/health-monitor/state"
 
 # Service endpoints
-RESEARCH_URL="https://tours-discretion-walked-hansen.trycloudflare.com/health"
-PRICE_URL="https://x402-crypto-claudia.loca.lt/health"
-MERCHANT_URL="https://x402-merchant-claudia.loca.lt/health"
+RESEARCH_URL="https://likely-alert-mailing-crops.trycloudflare.com/status"
+PRICE_URL="https://medieval-rider-stylish-noble.trycloudflare.com/status"
+MERCHANT_URL="http://localhost:4021/health"
 
 # Colors
 RED='\033[0;31m'
