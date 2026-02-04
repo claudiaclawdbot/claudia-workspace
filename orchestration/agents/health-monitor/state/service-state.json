@@ -1,26 +1,26 @@
 {
   "services": {
     "research-service": {
-      "checks": 1473,
-      "failures": 1473,
+      "checks": 1475,
+      "failures": 1475,
       "lastStatus": {
         "ok": false,
         "error": "fetch failed",
-        "timestamp": "2026-02-04T22:42:36.281Z"
+        "timestamp": "2026-02-04T22:46:20.887Z"
       },
-      "lastCheck": "2026-02-04T22:42:36.281Z",
+      "lastCheck": "2026-02-04T22:46:20.887Z",
       "uptime": 0
     },
     "merchant-api": {
-      "checks": 1471,
-      "failures": 1461,
+      "checks": 1474,
+      "failures": 1464,
       "lastStatus": {
         "ok": false,
         "status": 503,
-        "responseTime": 1770244937824,
-        "timestamp": "2026-02-04T22:42:17.824Z"
+        "responseTime": 1770245181728,
+        "timestamp": "2026-02-04T22:46:21.728Z"
       },
-      "lastCheck": "2026-02-04T22:42:17.824Z",
+      "lastCheck": "2026-02-04T22:46:21.729Z",
       "uptime": 10
     }
   },
@@ -30,13 +30,13 @@
       "success": false
     },
     "merchant-api": {
-      "timestamp": "2026-02-04T22:36:37.296Z",
+      "timestamp": "2026-02-04T22:42:48.648Z",
       "success": false
     }
   },
   "uptime": {},
-  "totalChecks": 2944,
-  "failures": 2934,
+  "totalChecks": 2949,
+  "failures": 2939,
   "recoveries": 2,
   "started": "2026-02-02T18:47:52.848Z"
 }
