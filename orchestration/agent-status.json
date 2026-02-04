@@ -1,0 +1,16 @@
+{
+  "agents": {
+    "Health Monitor": {
+      "status": "stopped",
+      "last_seen": "2026-02-02T13:49:00Z",
+      "reason": "Tunnel URLs expired, needs restart with updated configuration"
+    },
+    "Marketing Automation": {
+      "status": "stopped",
+      "last_seen": "2026-02-02T13:49:00Z",
+      "reason": "Depends on health monitor"
+    }
+  },
+  "system_health": "degraded",
+  "notes": "Services running locally (localhost:4020, localhost:3002) but tunnels expired. Gateway not running."
+}

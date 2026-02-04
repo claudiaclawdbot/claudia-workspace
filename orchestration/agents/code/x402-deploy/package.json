@@ -1,0 +1,27 @@
+{
+  "name": "x402-deploy",
+  "version": "1.0.0",
+  "description": "Deployment automation for x402 revenue-generating services",
+  "scripts": {
+    "deploy": "./deploy.sh",
+    "deploy:local": "./deploy.sh both docker",
+    "deploy:railway": "./deploy.sh both railway",
+    "deploy:fly": "./deploy.sh both fly",
+    "test": "./scripts/test-deployment.sh",
+    "setup": "./scripts/setup.sh",
+    "logs": "docker-compose logs -f",
+    "stop": "docker-compose down",
+    "clean": "docker-compose down -v && docker system prune -f"
+  },
+  "keywords": [
+    "x402",
+    "deployment",
+    "payments",
+    "agent",
+    "railway",
+    "fly.io",
+    "docker"
+  ],
+  "author": "CLAUDIA",
+  "license": "MIT"
+}

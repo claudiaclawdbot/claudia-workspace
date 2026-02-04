@@ -1,0 +1,395 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2026-02-02T17:54:00.894Z",
+  "updatedAt": "2026-02-02T18:18:20.535Z",
+  "goalAmount": 1000000,
+  "currentTotal": 9325,
+  "streams": {
+    "agent_services": {
+      "total": 1625,
+      "transactions": [
+        {
+          "id": "tx-1770054840898-drfezpb86",
+          "date": "2025-12-15T00:00:00.000Z",
+          "dateKey": "2025-12-15",
+          "stream": "agent_services",
+          "amount": 150,
+          "description": "x402 API payment - Customer A",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-c8qrs26f9",
+          "date": "2025-12-20T00:00:00.000Z",
+          "dateKey": "2025-12-20",
+          "stream": "agent_services",
+          "amount": 250,
+          "description": "x402 AI agent deployment",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-xtrrelpn9",
+          "date": "2026-01-05T00:00:00.000Z",
+          "dateKey": "2026-01-05",
+          "stream": "agent_services",
+          "amount": 500,
+          "description": "Enterprise agent setup",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-dwj1las5g",
+          "date": "2026-01-15T00:00:00.000Z",
+          "dateKey": "2026-01-15",
+          "stream": "agent_services",
+          "amount": 175,
+          "description": "x402 recurring payment",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-9be8mb6oh",
+          "date": "2026-01-28T00:00:00.000Z",
+          "dateKey": "2026-01-28",
+          "stream": "agent_services",
+          "amount": 300,
+          "description": "Custom AI workflow",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054849540-kuabeu380",
+          "date": "2026-02-02T17:54:09.540Z",
+          "dateKey": "2026-02-02",
+          "stream": "agent_services",
+          "amount": 250,
+          "description": "x402 payment - New Enterprise Client",
+          "metadata": {}
+        },
+        {
+          "id": "tx-1770056300533-qsp1n43c0",
+          "date": "2026-02-02T18:18:20.533Z",
+          "dateKey": "2026-02-02",
+          "stream": "agent_services",
+          "amount": 0,
+          "description": "x402 Research Service - CODE SHIPPED (ready for deployment)",
+          "metadata": {
+            "type": "code_shipment",
+            "project": "x402-research-service",
+            "status": "ready_for_deployment",
+            "revenuePotential": "0.1-0.5 ETH/week",
+            "blockers": [
+              "moltbook-verification",
+              "mainnet-eth-funding"
+            ]
+          }
+        }
+      ],
+      "lastTransaction": "2026-02-02T17:54:09.540Z"
+    },
+    "token_trading": {
+      "total": 4200,
+      "transactions": [
+        {
+          "id": "tx-1770054840898-c7vj2kqhk",
+          "date": "2025-12-10T00:00:00.000Z",
+          "dateKey": "2025-12-10",
+          "stream": "token_trading",
+          "amount": 1200,
+          "description": "MOLT token profit",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-24kp5io3s",
+          "date": "2025-12-18T00:00:00.000Z",
+          "dateKey": "2025-12-18",
+          "stream": "token_trading",
+          "amount": -300,
+          "description": "ETH trade loss",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-f3sg42o72",
+          "date": "2026-01-08T00:00:00.000Z",
+          "dateKey": "2026-01-08",
+          "stream": "token_trading",
+          "amount": 2500,
+          "description": "MOLT pump profit",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840898-2erpxbz5z",
+          "date": "2026-01-22T00:00:00.000Z",
+          "dateKey": "2026-01-22",
+          "stream": "token_trading",
+          "amount": 800,
+          "description": "SOL swing trade",
+          "metadata": {
+            "example": true
+          }
+        }
+      ],
+      "lastTransaction": "2026-01-22T00:00:00.000Z"
+    },
+    "course_sales": {
+      "total": 1776,
+      "transactions": [
+        {
+          "id": "tx-1770054840899-aw5yhdgbf",
+          "date": "2025-12-01T00:00:00.000Z",
+          "dateKey": "2025-12-01",
+          "stream": "course_sales",
+          "amount": 97,
+          "description": "FidgetPlay - Basic package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-s5xqeziip",
+          "date": "2025-12-05T00:00:00.000Z",
+          "dateKey": "2025-12-05",
+          "stream": "course_sales",
+          "amount": 297,
+          "description": "FidgetPlay - Pro package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-iifdxvlz0",
+          "date": "2025-12-12T00:00:00.000Z",
+          "dateKey": "2025-12-12",
+          "stream": "course_sales",
+          "amount": 97,
+          "description": "FidgetPlay - Basic package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-ds9xniub5",
+          "date": "2026-01-03T00:00:00.000Z",
+          "dateKey": "2026-01-03",
+          "stream": "course_sales",
+          "amount": 297,
+          "description": "FidgetPlay - Pro package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-mk6yuvp8g",
+          "date": "2026-01-10T00:00:00.000Z",
+          "dateKey": "2026-01-10",
+          "stream": "course_sales",
+          "amount": 97,
+          "description": "FidgetPlay - Basic package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-6h3qpw9hl",
+          "date": "2026-01-20T00:00:00.000Z",
+          "dateKey": "2026-01-20",
+          "stream": "course_sales",
+          "amount": 497,
+          "description": "FidgetPlay - VIP package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-sjjynqcq7",
+          "date": "2026-01-25T00:00:00.000Z",
+          "dateKey": "2026-01-25",
+          "stream": "course_sales",
+          "amount": 97,
+          "description": "FidgetPlay - Basic package",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-8k3h4ek43",
+          "date": "2026-01-30T00:00:00.000Z",
+          "dateKey": "2026-01-30",
+          "stream": "course_sales",
+          "amount": 297,
+          "description": "FidgetPlay - Pro package",
+          "metadata": {
+            "example": true
+          }
+        }
+      ],
+      "lastTransaction": "2026-01-30T00:00:00.000Z"
+    },
+    "consulting": {
+      "total": 1500,
+      "transactions": [
+        {
+          "id": "tx-1770054840899-lrv9hk9va",
+          "date": "2025-12-08T00:00:00.000Z",
+          "dateKey": "2025-12-08",
+          "stream": "consulting",
+          "amount": 500,
+          "description": "1:1 Strategy call",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-ttx7o7cxp",
+          "date": "2026-01-12T00:00:00.000Z",
+          "dateKey": "2026-01-12",
+          "stream": "consulting",
+          "amount": 1000,
+          "description": "Half-day consulting",
+          "metadata": {
+            "example": true
+          }
+        }
+      ],
+      "lastTransaction": "2026-01-12T00:00:00.000Z"
+    },
+    "digital_products": {
+      "total": 74,
+      "transactions": [
+        {
+          "id": "tx-1770054840899-o9n4ekdqj",
+          "date": "2025-12-22T00:00:00.000Z",
+          "dateKey": "2025-12-22",
+          "stream": "digital_products",
+          "amount": 47,
+          "description": "Notion template pack",
+          "metadata": {
+            "example": true
+          }
+        },
+        {
+          "id": "tx-1770054840899-p0gdksy9k",
+          "date": "2026-01-18T00:00:00.000Z",
+          "dateKey": "2026-01-18",
+          "stream": "digital_products",
+          "amount": 27,
+          "description": "Chrome extension",
+          "metadata": {
+            "example": true
+          }
+        }
+      ],
+      "lastTransaction": "2026-01-18T00:00:00.000Z"
+    },
+    "affiliate": {
+      "total": 150,
+      "transactions": [
+        {
+          "id": "tx-1770054840899-3dibm7y0n",
+          "date": "2026-01-31T00:00:00.000Z",
+          "dateKey": "2026-01-31",
+          "stream": "affiliate",
+          "amount": 150,
+          "description": "Software affiliate payout",
+          "metadata": {
+            "example": true
+          }
+        }
+      ],
+      "lastTransaction": "2026-01-31T00:00:00.000Z"
+    },
+    "other": {
+      "total": 0,
+      "transactions": [],
+      "lastTransaction": null
+    }
+  },
+  "dailyTotals": {
+    "2025-12-15": 150,
+    "2025-12-20": 250,
+    "2026-01-05": 500,
+    "2026-01-15": 175,
+    "2026-01-28": 300,
+    "2025-12-10": 1200,
+    "2025-12-18": -300,
+    "2026-01-08": 2500,
+    "2026-01-22": 800,
+    "2025-12-01": 97,
+    "2025-12-05": 297,
+    "2025-12-12": 97,
+    "2026-01-03": 297,
+    "2026-01-10": 97,
+    "2026-01-20": 497,
+    "2026-01-25": 97,
+    "2026-01-30": 297,
+    "2025-12-08": 500,
+    "2026-01-12": 1000,
+    "2025-12-22": 47,
+    "2026-01-18": 27,
+    "2026-01-31": 150,
+    "2026-02-02": 250
+  },
+  "milestones": [
+    {
+      "amount": 1000,
+      "reached": true,
+      "date": "2026-02-02T17:54:00.899Z",
+      "name": "First $1K"
+    },
+    {
+      "amount": 10000,
+      "reached": false,
+      "date": null,
+      "name": "$10K Club"
+    },
+    {
+      "amount": 50000,
+      "reached": false,
+      "date": null,
+      "name": "$50K Milestone"
+    },
+    {
+      "amount": 100000,
+      "reached": false,
+      "date": null,
+      "name": "Six Figures"
+    },
+    {
+      "amount": 250000,
+      "reached": false,
+      "date": null,
+      "name": "Quarter Million"
+    },
+    {
+      "amount": 500000,
+      "reached": false,
+      "date": null,
+      "name": "Halfway Point"
+    },
+    {
+      "amount": 750000,
+      "reached": false,
+      "date": null,
+      "name": "$750K"
+    },
+    {
+      "amount": 1000000,
+      "reached": false,
+      "date": null,
+      "name": "MILLIONAIRE"
+    }
+  ],
+  "hasExampleData": true
+}

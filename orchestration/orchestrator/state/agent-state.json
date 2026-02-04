@@ -1,0 +1,19 @@
+{
+  "id": "agt-ml5gqqyg-6voo",
+  "type": "orchestrator",
+  "name": "orchestrator",
+  "status": "idle",
+  "created": "2026-02-02T17:48:11.896Z",
+  "started": null,
+  "ended": null,
+  "currentTask": null,
+  "taskHistory": [],
+  "subAgents": [],
+  "workspacePath": "/Users/clawdbot/clawd/orchestration/orchestrator",
+  "config": {
+    "maxConcurrentAgents": 5,
+    "healthCheckInterval": 30000,
+    "autoSpawn": true
+  },
+  "metadata": {}
+}

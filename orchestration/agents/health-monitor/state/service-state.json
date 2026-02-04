@@ -1,0 +1,42 @@
+{
+  "services": {
+    "research-service": {
+      "checks": 760,
+      "failures": 760,
+      "lastStatus": {
+        "ok": false,
+        "error": "fetch failed",
+        "timestamp": "2026-02-04T04:52:15.886Z"
+      },
+      "lastCheck": "2026-02-04T04:52:15.886Z",
+      "uptime": 0
+    },
+    "merchant-api": {
+      "checks": 759,
+      "failures": 754,
+      "lastStatus": {
+        "ok": false,
+        "status": 503,
+        "responseTime": 1770180725506,
+        "timestamp": "2026-02-04T04:52:05.506Z"
+      },
+      "lastCheck": "2026-02-04T04:52:05.506Z",
+      "uptime": 5
+    }
+  },
+  "lastRecovery": {
+    "research-service": {
+      "timestamp": "2026-02-04T04:52:15.887Z",
+      "success": false
+    },
+    "merchant-api": {
+      "timestamp": "2026-02-04T04:50:13.975Z",
+      "success": false
+    }
+  },
+  "uptime": {},
+  "totalChecks": 1519,
+  "failures": 1514,
+  "recoveries": 1,
+  "started": "2026-02-02T18:47:52.848Z"
+}

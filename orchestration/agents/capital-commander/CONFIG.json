@@ -1,0 +1,23 @@
+{
+  "agent": {
+    "name": "CAPITAL COMMANDER",
+    "type": "trading",
+    "id": "capital-commander-001",
+    "version": "1.0.0"
+  },
+  "schedule": {
+    "active": true,
+    "timezone": "America/New_York",
+    "runs": ["08:00", "16:00", "22:00"]
+  },
+  "tasks": {
+    "defi_research": true,
+    "monitor_molt": true,
+    "prepare_strategy": true
+  },
+  "watchlist": ["MOLT", "AI16Z", "TAO", "VIRTUAL", "LUNA"],
+  "output": {
+    "market_brief": "/orchestration/output/market-brief-YYYY-MM-DD.md"
+  },
+  "status": "ACTIVE"
+}

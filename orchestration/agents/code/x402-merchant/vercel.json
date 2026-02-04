@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "x402-merchant",
+  "env": {
+    "MERCHANT_ADDRESS": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055"
+  }
+}

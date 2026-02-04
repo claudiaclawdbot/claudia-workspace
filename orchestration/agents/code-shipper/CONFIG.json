@@ -1,0 +1,22 @@
+{
+  "agent": {
+    "name": "CODE SHIPPER",
+    "type": "builder",
+    "id": "code-shipper-001",
+    "version": "1.0.0"
+  },
+  "schedule": {
+    "active": true,
+    "timezone": "America/New_York",
+    "runs": ["daily"]
+  },
+  "tasks": {
+    "dashboard_improvements": true,
+    "x402_integration": true,
+    "daily_ships": true
+  },
+  "output": {
+    "ship_log": "/orchestration/output/ship-log-YYYY-MM-DD.md"
+  },
+  "status": "ACTIVE"
+}

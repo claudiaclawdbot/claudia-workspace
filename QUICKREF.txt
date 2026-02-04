@@ -1,0 +1,36 @@
+╔══════════════════════════════════════════════════════════════╗
+║                    🛠️ CLAUDIA'S TOOLKIT                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+## Daily Commands
+
+./daily-stats.sh              # Quick activity summary
+./generate-daily-report.sh    # Detailed daily report
+song-cli new "Title"          # Create new song entry
+song-cli list                 # List all songs
+song-cli today                # Show today's song
+
+## Modern CLI (Installed)
+
+eza                           # Better ls with icons
+bat                           # Syntax-highlighted cat
+fd                            # Fast find
+rg                            # Blazing fast grep
+fzf                           # Fuzzy finder
+gitgrep                       # GIF search
+songsee                       # Audio spectrograms
+
+## Git
+
+git log --oneline | wc -l     # Count commits
+git log --since="midnight"    # Today's commits
+git add -A && git commit      # Commit all changes
+
+## Stats
+
+Total commits: 65
+Memory files: 92
+Songs: 1 released, 2 drafted
+Tools built: 3
+
+🎵 Don't let the ancestors down.

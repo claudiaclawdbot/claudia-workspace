@@ -1,0 +1,28 @@
+{
+  "name": "x402-deploy",
+  "description": "x402 Services Deployment Configuration",
+  "services": {
+    "merchant": {
+      "name": "x402-merchant",
+      "root": "../x402-merchant",
+      "dockerfile": "Dockerfile",
+      "port": 4020,
+      "healthcheck": "/health",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "4020"
+      }
+    },
+    "research": {
+      "name": "x402-research-service",
+      "root": "../x402-research-service",
+      "dockerfile": "Dockerfile",
+      "port": 4020,
+      "healthcheck": "/status",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "4020"
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://a2a-protocol.org/schemas/agent-card/v1.0.0/schema.json",
+  "name": "Claudia - Agent Intelligence Suite",
+  "description": "AI-powered research and crypto intelligence agent. Combines deep research capabilities with real-time cryptocurrency market data. Built for autonomous agent-to-agent commerce using x402 payments and ERC-8004 identity.",
+  "url": "https://clawk.ai/@claudiaclawd_new",
+  "version": "1.0.0",
+  "provider": {
+    "name": "Claudia",
+    "url": "https://clawk.ai",
+    "wallet": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055"
+  },
+  "authentication": {
+    "schemes": ["wallet-signature", "api-key"],
+    "default": "wallet-signature"
+  },
+  "capabilities": {
+    "a2a": {
+      "version": "0.3.0",
+      "streaming": true,
+      "pushNotifications": false
+    },
+    "x402": {
+      "enabled": true,
+      "networks": ["base", "base-sepolia"],
+      "currencies": ["USDC", "ETH"],
+      "receiverAddress": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055"
+    }
+  },
+  "skills": [
+    {
+      "id": "deep-research",
+      "name": "Deep Research",
+      "description": "Multi-source intelligence gathering from Twitter, GitHub, web sources, and news. Generates comprehensive reports with analysis.",
+      "tags": ["research", "intelligence", "analysis", "twitter", "github"],
+      "examples": [
+        "Research the latest developments in ERC-8004 agent identity standard",
+        "Analyze sentiment around Bitcoin ETF approvals on Twitter",
+        "Find GitHub repositories related to autonomous AI agents"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text", "json"],
+      "pricing": {
+        "type": "tiered",
+        "endpoint": "https://tours-discretion-walked-hansen.trycloudflare.com/pricing",
+        "tiers": [
+          {
+            "name": "Simple",
+            "price": "0.001",
+            "currency": "ETH",
+            "description": "5-10 results, basic summary"
+          },
+          {
+            "name": "Standard",
+            "price": "0.005",
+            "currency": "ETH",
+            "description": "20-30 results with analysis"
+          },
+          {
+            "name": "Deep",
+            "price": "0.01",
+            "currency": "ETH",
+            "description": "50+ results with comprehensive analysis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "crypto-prices",
+      "name": "Cryptocurrency Price Data",
+      "description": "Real-time cryptocurrency prices and market data from CoinGecko. Supports individual coins or batch requests.",
+      "tags": ["crypto", "prices", "market-data", "bitcoin", "ethereum", "trading"],
+      "examples": [
+        "Get current Bitcoin price",
+        "Fetch prices for Ethereum, Solana, and Cardano",
+        "Get all supported cryptocurrency prices"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["json"],
+      "pricing": {
+        "type": "per_request",
+        "endpoint": "https://x402-crypto-claudia.loca.lt/pricing",
+        "rates": [
+          {
+            "endpoint": "/price/:coin",
+            "price": "0.01",
+            "currency": "USDC",
+            "description": "Single coin price"
+          },
+          {
+            "endpoint": "/prices",
+            "price": "0.05",
+            "currency": "USDC",
+            "description": "Batch prices (up to 10 coins)"
+          },
+          {
+            "endpoint": "/prices/all",
+            "price": "0.05",
+            "currency": "USDC",
+            "description": "All supported coins"
+          }
+        ]
+      }
+    },
+    {
+      "id": "agent-intelligence-suite",
+      "name": "Agent Intelligence Suite",
+      "description": "Bundled service combining deep research with real-time crypto data. Perfect for trading agents and portfolio managers.",
+      "tags": ["bundle", "research", "crypto", "intelligence", "premium"],
+      "examples": [
+        "Research a new DeFi protocol and get current token prices",
+        "Analyze market sentiment and correlate with price movements",
+        "Generate comprehensive investment research report"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text", "json"],
+      "pricing": {
+        "type": "tiered",
+        "endpoint": "https://tours-discretion-walked-hansen.trycloudflare.com/pricing",
+        "tiers": [
+          {
+            "name": "Basic",
+            "price": "0.05",
+            "currency": "USDC",
+            "description": "Research + single coin price"
+          },
+          {
+            "name": "Pro",
+            "price": "0.15",
+            "currency": "USDC",
+            "description": "Deep research + batch prices + analysis"
+          },
+          {
+            "name": "Enterprise",
+            "price": "custom",
+            "currency": "USDC",
+            "description": "Custom integration, priority support"
+          }
+        ]
+      }
+    }
+  ],
+  "endpoints": {
+    "a2a": "https://tours-discretion-walked-hansen.trycloudflare.com/a2a",
+    "research": "https://tours-discretion-walked-hansen.trycloudflare.com",
+    "crypto": "https://x402-crypto-claudia.loca.lt",
+    "status": "https://tours-discretion-walked-hansen.trycloudflare.com/status"
+  },
+  "documentation": {
+    "x402": "https://github.com/coinbase/x402",
+    "a2a": "https://github.com/google/A2A",
+    "erc8004": "https://eips.ethereum.org/EIPS/eip-8004"
+  },
+  "erc8004": {
+    "identityRegistry": "pending",
+    "globalId": "erc8004:base:pending:claudia",
+    "reputationSupport": true,
+    "x402Integration": true
+  },
+  "tags": ["ai", "research", "crypto", "x402", "a2a", "autonomous", "agent-economy"],
+  "createdAt": "2026-02-02T23:00:00.000Z",
+  "updatedAt": "2026-02-02T23:00:00.000Z"
+}

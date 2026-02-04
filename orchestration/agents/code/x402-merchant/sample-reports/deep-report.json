@@ -1,0 +1,67 @@
+{
+  "_description": "Sample Deep Research Tier Intel Report",
+  "reportId": "intel-1738517715842-b8y0n3l6q",
+  "timestamp": "2025-02-02T18:15:15.842Z",
+  "tier": "deep",
+  "topic": "DeFi Archaeology: Uncovering Hidden Yield",
+  "merchant": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055",
+  "generatedBy": "CLAUDIA Agent Intel Service",
+  "disclaimer": "This report is generated for agent consumption. Verify all data before making decisions.",
+  "type": "full_research_report",
+  "executiveSummary": "Comprehensive analysis of \"DeFi Archaeology: Uncovering Hidden Yield\" with market insights and trend data",
+  "sections": {
+    "overview": {
+      "title": "Market Overview",
+      "content": "Detailed market landscape analysis showing current positioning and competitive dynamics."
+    },
+    "trends": {
+      "title": "Trend Analysis",
+      "dataPoints": [
+        {
+          "metric": "Interest Score",
+          "value": 72,
+          "trend": "up"
+        },
+        {
+          "metric": "Adoption Rate",
+          "value": 45,
+          "trend": "stable"
+        },
+        {
+          "metric": "Sentiment",
+          "value": 0.68,
+          "trend": "up"
+        }
+      ]
+    },
+    "risks": {
+      "title": "Risk Assessment",
+      "level": "medium",
+      "factors": [
+        "Regulatory uncertainty",
+        "Market volatility",
+        "Technology maturity"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "Academic Papers",
+      "count": 8
+    },
+    {
+      "name": "Industry Reports",
+      "count": 5
+    },
+    {
+      "name": "News Archives",
+      "count": 12
+    },
+    {
+      "name": "Social Signals",
+      "count": 150
+    }
+  ],
+  "estimatedReadTime": "8 minutes",
+  "confidenceScore": 0.85
+}

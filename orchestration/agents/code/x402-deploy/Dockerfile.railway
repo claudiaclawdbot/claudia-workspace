@@ -1,0 +1,48 @@
+# Railway-optimized Dockerfile for x402 services
+# This is a multi-service Dockerfile that can be used for both merchant and research
+
+FROM node:20-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies for health checks
+RUN apk add --no-cache curl
+
+# Copy package files first (better caching)
+COPY package*.json ./
+
+# Install based on service type
+# For merchant (no tsconfig needed)
+RUN if [ ! -f tsconfig.json ]; then \
+        npm ci --only=production; \
+    else \
+        npm ci; \
+    fi
+
+# Copy source code
+COPY . .
+
+# Build if TypeScript (research service)
+RUN if [ -f tsconfig.json ]; then npm run build; fi
+
+# Create logs directory
+RUN mkdir -p logs
+
+# Set environment
+ENV NODE_ENV=production
+ENV PORT=${PORT:-4020}
+
+# Expose port
+EXPOSE ${PORT}
+
+# Health check - works for both services
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:${PORT}/health || curl -f http://localhost:${PORT}/status || exit 1
+
+# Start command - auto-detect service type
+CMD if [ -f dist/server.js ]; then \
+        node dist/server.js; \
+    else \
+        node server.js; \
+    fi

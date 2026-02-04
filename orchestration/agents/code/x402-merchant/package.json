@@ -1,0 +1,28 @@
+{
+  "name": "x402-merchant-agent-intel",
+  "version": "1.0.0",
+  "description": "x402 Merchant API for Agent Intel as a Service",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "viem": "^2.21.0"
+  },
+  "keywords": [
+    "x402",
+    "payments",
+    "agent",
+    "intel"
+  ],
+  "author": "CLAUDIA",
+  "license": "MIT",
+  "devDependencies": {
+    "localtunnel": "^2.0.2"
+  }
+}

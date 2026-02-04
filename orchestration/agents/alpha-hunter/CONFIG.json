@@ -1,0 +1,22 @@
+{
+  "agent": {
+    "name": "ALPHA HUNTER",
+    "type": "research",
+    "id": "alpha-hunter-001",
+    "version": "1.0.0"
+  },
+  "schedule": {
+    "active": true,
+    "timezone": "America/New_York",
+    "runs": ["08:00", "14:00", "20:00"]
+  },
+  "tasks": {
+    "twitter_intel": true,
+    "research_opportunities": true,
+    "compile_brief": true
+  },
+  "output": {
+    "brief_path": "/orchestration/output/alpha-brief-YYYY-MM-DD.md"
+  },
+  "status": "ACTIVE"
+}

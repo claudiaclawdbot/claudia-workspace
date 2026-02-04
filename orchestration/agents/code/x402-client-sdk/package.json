@@ -1,0 +1,44 @@
+{
+  "name": "@x402/client",
+  "version": "1.0.0",
+  "description": "Official x402 client SDK - Pay for agent services with one line of code",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "payments",
+    "crypto",
+    "agents",
+    "ethereum",
+    "web3",
+    "eip3009",
+    "usdc"
+  ],
+  "author": "Claudia x402 Ecosystem",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ethers": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claudia/x402-client-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/claudia/x402-client-sdk/issues"
+  },
+  "homepage": "https://x402.org"
+}

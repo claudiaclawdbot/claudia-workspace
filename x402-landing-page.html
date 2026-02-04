@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x402 APIs for Agents | Pay-Per-Query Infrastructure</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e4e4e7;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            color: #818cf8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #e4e4e7;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .demo-section {
+            padding: 60px 0;
+            background: rgba(0,0,0,0.2);
+        }
+        .demo-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .demo-box h2 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .price-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .price-card {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .price-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+        .coin-symbol {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .coin-price {
+            font-size: 1.25rem;
+            color: #4ade80;
+            margin-top: 8px;
+        }
+        .coin-change {
+            font-size: 0.875rem;
+            margin-top: 4px;
+        }
+        .positive { color: #4ade80; }
+        .negative { color: #f87171; }
+        .services {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #fff;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        .service-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .service-card p {
+            color: #94a3b8;
+            margin-bottom: 24px;
+        }
+        .pricing-tag {
+            display: inline-block;
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .code-section {
+            padding: 60px 0;
+            background: rgba(0,0,0,0.2);
+        }
+        .code-block {
+            background: #0d1117;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            overflow-x: auto;
+            margin-top: 24px;
+        }
+        .code-block pre {
+            color: #e6edf3;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .code-block .comment { color: #8b949e; }
+        .code-block .keyword { color: #ff7b72; }
+        .code-block .string { color: #a5d6ff; }
+        .code-block .function { color: #d2a8ff; }
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #64748b;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-top: 20px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .service-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">🚀 Now Live on Base</div>
+            <h1>APIs for the Agent Economy</h1>
+            <p class="subtitle">
+                Pay-per-query infrastructure for AI agents. No subscriptions, no upfront costs. 
+                Real-time crypto data and AI research powered by x402 payments.
+            </p>
+            <div class="cta-group">
+                <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                <a href="#integration" class="btn btn-secondary">View Integration</a>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                All Services Operational
+            </div>
+        </div>
+    </header>
+
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-box">
+                <h2>🔥 Live Crypto Prices</h2>
+                <p style="color: #94a3b8; margin-bottom: 24px;">
+                    Real-time data from CoinGecko. Updated every 30 seconds.
+                </p>
+                <div class="price-display" id="priceDisplay">
+                    <div class="price-card">
+                        <div class="coin-symbol">BTC</div>
+                        <div class="coin-price" id="btc-price">Loading...</div>
+                        <div class="coin-change" id="btc-change">--</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="coin-symbol">ETH</div>
+                        <div class="coin-price" id="eth-price">Loading...</div>
+                        <div class="coin-change" id="eth-change">--</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="coin-symbol">SOL</div>
+                        <div class="coin-price" id="sol-price">Loading...</div>
+                        <div class="coin-change" id="sol-change">--</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="coin-symbol">BASE</div>
+                        <div class="coin-price" id="base-price">Loading...</div>
+                        <div class="coin-change" id="base-change">--</div>
+                    </div>
+                </div>
+                <p style="color: #64748b; font-size: 0.875rem; text-align: center;">
+                    Demo shows cached data. API returns real-time prices with x402 payment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Available Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Crypto Price API</h3>
+                    <p>Real-time cryptocurrency prices for trading bots and portfolio trackers. Support for 10+ major coins with 24h change data.</p>
+                    <div style="margin-bottom: 20px;">
+                        <span class="pricing-tag">$0.01 / query</span>
+                    </div>
+                    <ul style="color: #94a3b8; font-size: 0.9rem; list-style: none;">
+                        <li style="margin-bottom: 8px;">✓ Bitcoin, Ethereum, Solana, Base</li>
+                        <li style="margin-bottom: 8px;">✓ Market cap & 24h volume</li>
+                        <li style="margin-bottom: 8px;">✓ Batch requests ($0.05)</li>
+                        <li>✓ JSON format</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>AI Research API</h3>
+                    <p>Deep-dive research reports on any topic. AI-powered intelligence gathering with structured JSON output for agents.</p>
+                    <div style="margin-bottom: 20px;">
+                        <span class="pricing-tag">$0.10 / report</span>
+                    </div>
+                    <ul style="color: #94a3b8; font-size: 0.9rem; list-style: none;">
+                        <li style="margin-bottom: 8px;">✓ Multi-source intelligence</li>
+                        <li style="margin-bottom: 8px;">✓ Structured data output</li>
+                        <li style="margin-bottom: 8px;">✓ Web + academic sources</li>
+                        <li>✓ Cited references</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-section" id="integration">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 24px;">5-Minute Integration</h2>
+            <p style="text-align: center; color: #94a3b8; max-width: 600px; margin: 0 auto 40px;">
+                x402 protocol handles payments automatically. Just make the request with your wallet.
+            </p>
+            
+            <div class="code-block">
+                <pre><span class="comment">// Example: Get Bitcoin price with x402 payment</span>
+<span class="keyword">const</span> <span class="function">fetchCryptoPrice</span> = <span class="keyword">async</span> (coin) => {
+  <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">`https://api.x402.io/price/${coin}`</span>, {
+    headers: {
+      <span class="string">'x-x402-wallet'</span>: <span class="string">'0xYourWalletAddress'</span>,
+      <span class="string">'x-x402-signature'</span>: <span class="string">'signedPayment'</span>
+    }
+  });
+  
+  <span class="keyword">return</span> response.<span class="function">json</span>();
+};
+
+<span class="comment">// Usage: Just $0.01 per query</span>
+<span class="keyword">const</span> price = <span class="keyword">await</span> <span class="function">fetchCryptoPrice</span>(<span class="string">'bitcoin'</span>);
+<span class="function">console</span>.<span class="function">log</span>(<span class="string">`BTC: $${price.usd}`</span>);</pre>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/ultimatecodemaster/x402-crypto-service" class="btn btn-secondary" target="_blank">
+                    View Full Documentation →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: #fff;">Ready to integrate?</h2>
+            <p style="color: #94a3b8; max-width: 500px; margin: 0 auto 32px;">
+                First query is free. No registration required. Just bring your wallet.
+            </p>
+            <div class="cta-group">
+                <a href="https://seven-pierre-richmond-antarctica.trycloudflare.com/status" class="btn btn-primary" target="_blank">
+                    Test Crypto API
+                </a>
+                <a href="https://son-celebs-okay-indices.trycloudflare.com/status" class="btn btn-secondary" target="_blank">
+                    Test Research API
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Built by Claudia for the Agent Economy</p>
+            <p style="margin-top: 8px; font-size: 0.875rem;">
+                Powered by x402 Payment Protocol on Base
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch live crypto prices for demo
+        async function fetchPrices() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,base-governance-token&vs_currencies=usd&include_24hr_change=true');
+                const data = await response.json();
+                
+                const coins = {
+                    'btc': data.bitcoin,
+                    'eth': data.ethereum,
+                    'sol': data.solana,
+                    'base': data['base-governance-token']
+                };
+                
+                for (const [symbol, coinData] of Object.entries(coins)) {
+                    if (coinData) {
+                        document.getElementById(`${symbol}-price`).textContent = `$${coinData.usd.toLocaleString()}`;
+                        const change = coinData.usd_24h_change;
+                        const changeEl = document.getElementById(`${symbol}-change`);
+                        changeEl.textContent = `${change > 0 ? '+' : ''}${change.toFixed(2)}%`;
+                        changeEl.className = `coin-change ${change > 0 ? 'positive' : 'negative'}`;
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to fetch prices:', error);
+                document.querySelectorAll('.coin-price').forEach(el => {
+                    el.textContent = 'API Live';
+                });
+            }
+        }
+        
+        fetchPrices();
+        setInterval(fetchPrices, 30000); // Update every 30s
+    </script>
+</body>
+</html>

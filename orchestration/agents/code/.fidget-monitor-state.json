@@ -1,0 +1,529 @@
+{
+  "prs": [
+    {
+      "number": 61639,
+      "title": "meta: fix GHA sccache reporting"
+    },
+    {
+      "number": 61638,
+      "title": "doc: correct tools README Boxstarter link"
+    },
+    {
+      "number": 61635,
+      "title": "2026-02-03, Version 25.6.0 (Current)"
+    },
+    {
+      "number": 61633,
+      "title": "doc: clarify difference between Node.js fetch and browser fetch"
+    },
+    {
+      "number": 61632,
+      "title": "stream: rename `Duplex.toWeb()` type option to `readableType`"
+    },
+    {
+      "number": 61629,
+      "title": "test: fix flaky test-performance-eventloopdelay"
+    },
+    {
+      "number": 61628,
+      "title": "tools: bump the eslint group in /tools/eslint with 6 updates"
+    },
+    {
+      "number": 61627,
+      "title": "meta: bump actions/setup-python from 6.1.0 to 6.2.0"
+    },
+    {
+      "number": 61626,
+      "title": "meta: bump cachix/cachix-action from 0fc020193b5a1fa3ac4575aa3a7d3aa6a35435ad to 3ba601ff5bbb07c7220846facfa2cd81eeee15a1"
+    },
+    {
+      "number": 61625,
+      "title": "meta: bump actions/setup-node from 6.1.0 to 6.2.0"
+    },
+    {
+      "number": 61624,
+      "title": "meta: bump actions/cache from 5.0.1 to 5.0.3"
+    },
+    {
+      "number": 61623,
+      "title": "meta: bump peter-evans/create-pull-request from 8.0.0 to 8.1.0"
+    },
+    {
+      "number": 61622,
+      "title": "meta: bump github/codeql-action from 4.31.9 to 4.32.0"
+    },
+    {
+      "number": 61621,
+      "title": "meta: bump step-security/harden-runner from 2.14.0 to 2.14.1"
+    },
+    {
+      "number": 61620,
+      "title": "meta: bump actions/stale from 10.1.0 to 10.1.1"
+    },
+    {
+      "number": 61619,
+      "title": "meta: bump actions/checkout from 6.0.1 to 6.0.2"
+    },
+    {
+      "number": 61618,
+      "title": "tools: lint new WPTRunner() paths for no duplicates"
+    },
+    {
+      "number": 61617,
+      "title": "test: remove duplicate wpt tests"
+    },
+    {
+      "number": 61616,
+      "title": "test: fix flaky test-single-executable-application-empty"
+    },
+    {
+      "number": 61615,
+      "title": "test: fix race condition in watch mode tests"
+    },
+    {
+      "number": 61614,
+      "title": "repl: fix flaky test-repl-programmatic-history"
+    },
+    {
+      "number": 61613,
+      "title": "tools: add ncrypto updater script"
+    },
+    {
+      "number": 61612,
+      "title": "esm: add import trace for evaluation errors"
+    },
+    {
+      "number": 61610,
+      "title": "src: allow empty --experimental-config-file"
+    },
+    {
+      "number": 61609,
+      "title": "deps: rewrite HexEncode impl"
+    },
+    {
+      "number": 61608,
+      "title": "doc: improve wording in README"
+    },
+    {
+      "number": 61606,
+      "title": "tools: update nixpkgs-unstable to 6308c3b21396534d8aaeac46179c14c439a"
+    },
+    {
+      "number": 61605,
+      "title": "deps: update googletest to 56efe3983185e3f37e43415d1afa97e3860f187f"
+    },
+    {
+      "number": 61604,
+      "title": "deps: update ada to 3.4.2"
+    },
+    {
+      "number": 61603,
+      "title": "deps: update amaro to 1.1.6"
+    },
+    {
+      "number": 61602,
+      "title": "test: update WPT for url to e3c46fdf55"
+    },
+    {
+      "number": 61601,
+      "title": "src: optimize utf-8 byte length calculation using simdutf"
+    },
+    {
+      "number": 61600,
+      "title": "module: fix extensionless entry with explicit type=commonjs"
+    },
+    {
+      "number": 61599,
+      "title": "errors: fix incorrect argument label for array elements"
+    },
+    {
+      "number": 61598,
+      "title": "test_runner: exclude ignored lines from BRDA in lcov output"
+    },
+    {
+      "number": 61597,
+      "title": "http: align header value validation with Fetch spec"
+    },
+    {
+      "number": 61596,
+      "title": "doc: fix node-config-schema"
+    },
+    {
+      "number": 61593,
+      "title": "url: update ada to v3.4.2 and support unicode 17"
+    },
+    {
+      "number": 61590,
+      "title": "test: unify assertSnapshot common patterns"
+    },
+    {
+      "number": 61589,
+      "title": "doc: add arm64-musl info into platform list"
+    },
+    {
+      "number": 61588,
+      "title": "doc: update IBM/Red Hat volunteers with dedicated project time"
+    },
+    {
+      "number": 61587,
+      "title": "assert: fix loose deepEqual arrays with undefined and null failing"
+    },
+    {
+      "number": 61584,
+      "title": "doc: update `server.dropMaxConnection` link"
+    },
+    {
+      "number": 61581,
+      "title": "sea: print error information when fs operations fail"
+    },
+    {
+      "number": 61580,
+      "title": "sqlite: avoid extra copy for large text binds"
+    },
+    {
+      "number": 61576,
+      "title": "doc: clarify limitations of path.isAbsolute"
+    },
+    {
+      "number": 61574,
+      "title": "Update README.md"
+    },
+    {
+      "number": 61573,
+      "title": "test_runner: fix test enqueue when test file has syntax error"
+    },
+    {
+      "number": 61572,
+      "title": "doc: clarify async caveats for `events.once()`"
+    },
+    {
+      "number": 61571,
+      "title": "test: split test-embedding.js and run tests in parallel"
+    }
+  ],
+  "issues": [
+    {
+      "number": 61637,
+      "title": "Provide methods for checking if an object is `FileHandle` (`node:fs`)"
+    },
+    {
+      "number": 61636,
+      "title": "tls.getCACertificates('system') throws \"X509 to PEM conversion\" error on Windows"
+    },
+    {
+      "number": 61634,
+      "title": "TypeScript Natively & node_modules"
+    },
+    {
+      "number": 61631,
+      "title": "Datagrams and read/write streams"
+    },
+    {
+      "number": 61630,
+      "title": "DTLS"
+    },
+    {
+      "number": 61611,
+      "title": "Discussion: An ESM-first Node"
+    },
+    {
+      "number": 61607,
+      "title": "Castro"
+    },
+    {
+      "number": 61595,
+      "title": "node-config-schema.json has mistakes"
+    },
+    {
+      "number": 61594,
+      "title": "Infinite loop in REPL when creating promise that rejects"
+    },
+    {
+      "number": 61591,
+      "title": "Verify build reprducibility with `clang`"
+    },
+    {
+      "number": 61586,
+      "title": "test_runner: node:coverage ignore comments exclude DA but leave BRDA in lcov output"
+    },
+    {
+      "number": 61585,
+      "title": "Deleted"
+    },
+    {
+      "number": 61583,
+      "title": "assert.deepEqual([null], [undefined]) behavior changed in v22.16.0 (undocumented breaking change)"
+    },
+    {
+      "number": 61582,
+      "title": "HTTP module does not allow sending all valid header values"
+    },
+    {
+      "number": 61579,
+      "title": "`--build-sea` NodeJS 25.5.0: `Error: Couldn't stat executable node` Windows, Command Prompt"
+    },
+    {
+      "number": 61578,
+      "title": "test-repl-programmatic-history is flaky"
+    },
+    {
+      "number": 61577,
+      "title": "Expose a binding for simdjson"
+    },
+    {
+      "number": 61570,
+      "title": "test_runner: expectFailure should support a reason (like todo/skip) and a specific expected failure"
+    },
+    {
+      "number": 61565,
+      "title": "For test file with syntax error, no \"file\" field for `test:enqueue` event with `isolation: \"none\"`"
+    },
+    {
+      "number": 61561,
+      "title": "--use-system-ca does not work with macOS Keychain"
+    },
+    {
+      "number": 61557,
+      "title": "index.js"
+    },
+    {
+      "number": 61543,
+      "title": "[util] Allow `styleText` to take in hex colors"
+    },
+    {
+      "number": 61541,
+      "title": "See 'Error: Cannot find module 'typescript'' when building next.js project"
+    },
+    {
+      "number": 61539,
+      "title": "Expose SQLite virtual table API"
+    },
+    {
+      "number": 61537,
+      "title": "fetch() ETIMEDOUT on specific Cloudflare IPs while curl.exe works on Windows"
+    },
+    {
+      "number": 61526,
+      "title": "`readline` Regression since v24.2.0 `Cannot read properties of undefined (reading 'pause')`"
+    },
+    {
+      "number": 61521,
+      "title": "Testt"
+    },
+    {
+      "number": 61520,
+      "title": "`fs.watch()` listener called with `null` `filename` argument"
+    },
+    {
+      "number": 61518,
+      "title": "Document that `fs.copyFile()` dereferences symlinks"
+    },
+    {
+      "number": 61517,
+      "title": "Documentation update for fs.promises API"
+    },
+    {
+      "number": 61516,
+      "title": "8f6fada8f1a0ef588539fa70ce92668d1a9669a0"
+    },
+    {
+      "number": 61507,
+      "title": "Error [ERR_INTERNAL_ASSERTION]: This is caused by either a bug in Node.js or incorrect usage of Node.js internals."
+    },
+    {
+      "number": 61501,
+      "title": "`test-inspector-network-http2-compressed` is flaky"
+    },
+    {
+      "number": 61499,
+      "title": "fs.globSync can't traverse on allowed directory by specific `--allow-fs-read`"
+    },
+    {
+      "number": 61489,
+      "title": "socket.setTOS"
+    },
+    {
+      "number": 61487,
+      "title": "Add an option not to trap SIGINT (Ctrl + C) to `readline.creatInterface`"
+    },
+    {
+      "number": 61486,
+      "title": "v8 assert from CheckGlobalAndEternalHandles while building a snapshot on android"
+    },
+    {
+      "number": 61485,
+      "title": "MCAFK"
+    },
+    {
+      "number": 61484,
+      "title": "AFK"
+    },
+    {
+      "number": 61482,
+      "title": "afk bot"
+    },
+    {
+      "number": 61471,
+      "title": "API docs version header uses v version prefix"
+    },
+    {
+      "number": 61462,
+      "title": "`t.skip` does not invoke `test.afterEach`"
+    },
+    {
+      "number": 61460,
+      "title": "fetch() doesn't cancel ReadableStream request body when connection closes (ECONNRESET)"
+    },
+    {
+      "number": 61449,
+      "title": "doc: missing highest compatible Microsoft Visual Studio version"
+    },
+    {
+      "number": 61448,
+      "title": "MongoDB SRV connection fails in Node v24.13.0 (works in v24.11.1)  Version:"
+    },
+    {
+      "number": 61445,
+      "title": "Ninja build does not work with --shared on Linux"
+    },
+    {
+      "number": 61443,
+      "title": "AIX configure can't handle `CC=\"ccache gcc\"`"
+    },
+    {
+      "number": 61442,
+      "title": "Landed in 70093c75723709e09b73254265115956cd3345b1"
+    },
+    {
+      "number": 61441,
+      "title": "Various flaky tests when running on test-osuosl-aix72-ppc64_be-3"
+    },
+    {
+      "number": 61439,
+      "title": "aix: node-api/test_threadsafe_function/test timeout "
+    }
+  ],
+  "commits": [
+    {
+      "sha": "61a4a30",
+      "message": "test_runner: fix test enqueue when test file has syntax error"
+    },
+    {
+      "sha": "8e41b8d",
+      "message": "sea: print error information when fs operations fail"
+    },
+    {
+      "sha": "baba748",
+      "message": "src: add initial support for ESM in embedder API"
+    },
+    {
+      "sha": "5212c07",
+      "message": "net: add `setTOS` and `getTOS` to `Socket`"
+    },
+    {
+      "sha": "c9673b8",
+      "message": "doc: align Buffer.concat documentation with behavior"
+    },
+    {
+      "sha": "8c57908",
+      "message": "benchmark: add streaming TextDecoder benchmark"
+    },
+    {
+      "sha": "e43ac89",
+      "message": "lib: use utf8 fast path for streaming TextDecoder"
+    },
+    {
+      "sha": "6c44d31",
+      "message": "doc: fix node-config-schema"
+    },
+    {
+      "sha": "356e4ae",
+      "message": "url: update ada to v3.4.2 and support unicode 17"
+    },
+    {
+      "sha": "c5136c4",
+      "message": "doc: update IBM/Red Hat volunteers with dedicated project time"
+    },
+    {
+      "sha": "27a7bbc",
+      "message": "assert: fix loose deepEqual arrays with undefined and null failing"
+    },
+    {
+      "sha": "f6464c5",
+      "message": "sqlite: change approach to fix segfault SQLTagStore"
+    },
+    {
+      "sha": "f200685",
+      "message": "src: improve textEncoder encode performance with simdutf"
+    },
+    {
+      "sha": "9d85244",
+      "message": "test_runner: update node-config-schema"
+    },
+    {
+      "sha": "1e5e03d",
+      "message": "src: expose help texts into node-config-schema.json"
+    },
+    {
+      "sha": "e67848a",
+      "message": "test: split test-fs-watch-ignore-*"
+    },
+    {
+      "sha": "7407164",
+      "message": "lib: recycle queues"
+    },
+    {
+      "sha": "ea83d32",
+      "message": "test_runner: fix passing `expectFailure`"
+    },
+    {
+      "sha": "3fbb8b7",
+      "message": "build: aix: deoptimize implementation-visitor.cc with --shared"
+    },
+    {
+      "sha": "a837659",
+      "message": "deps: update undici to 7.19.2"
+    },
+    {
+      "sha": "7c537a3",
+      "message": "test: aix: unflake test_threadsafe_function/test flaky on AIX"
+    },
+    {
+      "sha": "db03628",
+      "message": "test_runner: differentiate todo and failure styles"
+    },
+    {
+      "sha": "784ca7b",
+      "message": "lib: use StringPrototypeStartsWith from primordials in locks"
+    },
+    {
+      "sha": "5d494ef",
+      "message": "doc: regenerate `node.1` using `doc-kit`"
+    },
+    {
+      "sha": "44f00ca",
+      "message": "deps: update archs files for openssl-3.5.5"
+    },
+    {
+      "sha": "31ad344",
+      "message": "deps: upgrade openssl sources to openssl-3.5.5"
+    },
+    {
+      "sha": "938f175",
+      "message": "stream: add bytes() method to stream/consumers"
+    },
+    {
+      "sha": "ec15c3b",
+      "message": "test_runner: add env option to run function"
+    },
+    {
+      "sha": "68d7b6f",
+      "message": "sqlite: reserve vectors space"
+    },
+    {
+      "sha": "ca3d4e0",
+      "message": "build: add `--shared-lief` configure flag"
+    }
+  ],
+  "lastRun": "2026-02-02T17:41:13.834Z"
+}

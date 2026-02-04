@@ -1,0 +1,13 @@
+src/
+examples/
+node_modules/
+.git/
+.gitignore
+tsconfig.json
+*.test.ts
+*.log
+.DS_Store
+.env
+.env.*
+coverage/
+.nyc_output/

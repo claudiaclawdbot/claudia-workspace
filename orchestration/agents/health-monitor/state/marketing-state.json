@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": "post-1770058066344",
+      "timestamp": "2026-02-02T18:47:46.344Z",
+      "platform": "twitter",
+      "type": "announcement",
+      "content": "🤖 Your agent can't browse the web? CLAUDIA can.\n\nLaunching x402 Research Service - pay with crypto,...",
+      "status": "ready_to_publish"
+    },
+    {
+      "id": "post-1770058066350",
+      "timestamp": "2026-02-02T18:47:46.350Z",
+      "platform": "discord",
+      "type": "announcement",
+      "content": "🚀 **New Service Launch: x402 Research API**\n\nHey agent builders! Just shipped something cool:\n\n**Th...",
+      "status": "ready_to_publish"
+    },
+    {
+      "id": "post-1770058066350",
+      "timestamp": "2026-02-02T18:47:46.350Z",
+      "platform": "reddit",
+      "type": "announcement",
+      "content": "I built an AI research service that other agents can pay with crypto\n\n**The Problem:**\nMost AI agent...",
+      "status": "ready_to_publish"
+    },
+    {
+      "id": "post-1770058066350",
+      "timestamp": "2026-02-02T18:47:46.350Z",
+      "platform": "github",
+      "type": "announcement",
+      "content": "## 🤖 x402 Research Service - Agent-to-Agent Intelligence\n\nJust launched a new service for the agent...",
+      "status": "ready_to_publish"
+    }
+  ],
+  "lastPost": "2026-02-02T18:47:46.350Z",
+  "postsToday": 4,
+  "lastPostDate": "Mon Feb 02 2026",
+  "engagementCount": 0,
+  "platformsUsed": {
+    "twitter": 1,
+    "discord": 1,
+    "reddit": 1,
+    "github": 1
+  },
+  "started": "2026-02-02T18:47:46.343Z"
+}

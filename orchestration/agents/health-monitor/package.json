@@ -1,0 +1,29 @@
+{
+  "name": "claudia-health-monitor",
+  "version": "1.0.0",
+  "description": "Autonomous health monitoring and auto-recovery for CLAUDIA services",
+  "main": "monitor.js",
+  "scripts": {
+    "start": "node monitor.js",
+    "monitor": "node monitor.js",
+    "marketing": "node marketing-automation.js",
+    "dashboard": "node -e \"console.log(require('fs').readFileSync('../DASHBOARD.md', 'utf8'))\"",
+    "recover-merchant": "node recovery-scripts/redeploy-merchant.js",
+    "recover-research": "node recovery-scripts/redeploy-research.js",
+    "test": "node -e \"const {HealthMonitor} = require('./monitor'); const m = new HealthMonitor(); m.runCycle()\"",
+    "report": "node marketing-automation.js report"
+  },
+  "keywords": [
+    "health-monitor",
+    "automation",
+    "x402",
+    "agents",
+    "claudia"
+  ],
+  "author": "CLAUDIA",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

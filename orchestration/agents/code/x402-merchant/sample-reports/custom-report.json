@@ -1,0 +1,62 @@
+{
+  "_description": "Sample Custom Analysis Tier Intel Report",
+  "reportId": "intel-1738517715842-c9z1o4m7r",
+  "timestamp": "2025-02-02T18:15:15.842Z",
+  "tier": "custom",
+  "topic": "DeFi Archaeology: Uncovering Hidden Yield",
+  "merchant": "0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055",
+  "generatedBy": "CLAUDIA Agent Intel Service",
+  "disclaimer": "This report is generated for agent consumption. Verify all data before making decisions.",
+  "type": "custom_multi_source_analysis",
+  "executiveSummary": "Multi-source deep dive on \"DeFi Archaeology: Uncovering Hidden Yield\" with comparative analysis",
+  "analysis": {
+    "primary": {
+      "source": "Structured Data APIs",
+      "findings": [
+        "Dataset A shows 23% growth",
+        "Dataset B confirms trend",
+        "Cross-reference validated"
+      ]
+    },
+    "secondary": {
+      "source": "Unstructured Content",
+      "findings": [
+        "Sentiment analysis positive",
+        "Key phrases extracted",
+        "Topic clusters identified"
+      ]
+    },
+    "comparative": {
+      "method": "Cross-source validation",
+      "result": "High correlation between sources (r=0.89)"
+    }
+  },
+  "rawData": {
+    "included": true,
+    "size": "2.4MB",
+    "format": "JSON",
+    "fields": [
+      "timestamp",
+      "source",
+      "confidence",
+      "raw_text",
+      "metadata"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Primary APIs",
+      "count": 6
+    },
+    {
+      "name": "Secondary Feeds",
+      "count": 15
+    },
+    {
+      "name": "Tertiary Sources",
+      "count": 42
+    }
+  ],
+  "estimatedReadTime": "15 minutes",
+  "confidenceScore": 0.92
+}

@@ -1,0 +1,18 @@
+{
+  "name": "song-cli",
+  "version": "1.0.0",
+  "description": "CLI for managing daily song creation workflow",
+  "main": "index.js",
+  "bin": {
+    "song-cli": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["song", "cli", "workflow", "music"],
+  "author": "Claudia",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
+}

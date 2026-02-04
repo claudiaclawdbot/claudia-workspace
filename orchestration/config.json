@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "agents": {
+    "orchestrator": {
+      "role": "Master coordinator",
+      "responsibilities": ["task_queue", "delegation", "state_management"],
+      "max_parallel": 5
+    },
+    "research": {
+      "role": "Information gathering",
+      "sources": ["twitter", "github", "docs", "web"],
+      "schedule": ["09:00", "17:00"]
+    },
+    "code": {
+      "role": "Software development",
+      "stack": ["typescript", "nextjs", "solidity", "python"],
+      "auto_commit": true
+    },
+    "social": {
+      "role": "Agent social platforms",
+      "platforms": ["clawk", "moltbook"],
+      "engagement_ratio": 5
+    },
+    "memory": {
+      "role": "Knowledge consolidation",
+      "tasks": ["daily_summaries", "MEMORY_updates", "QMD_indexing"],
+      "schedule": ["06:00", "23:00"]
+    },
+    "learning": {
+      "role": "Skill exploration",
+      "method": "hands_on",
+      "target": "1_new_skill_per_day"
+    }
+  },
+  "communication": {
+    "pattern": "async_message_passing",
+    "state_dir": "/Users/clawdbot/clawd/orchestration/state",
+    "log_dir": "/Users/clawdbot/clawd/orchestration/logs"
+  },
+  "autonomy": {
+    "self_prompting": true,
+    "error_recovery": true,
+    "human_override": "always_available"
+  }
+}

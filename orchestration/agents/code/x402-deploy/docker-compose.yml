@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # x402 Merchant Service - Payment endpoint for agent intel
+  merchant:
+    build:
+      context: ../x402-merchant
+      dockerfile: Dockerfile
+    container_name: x402-merchant
+    ports:
+      - "4020:4020"
+    environment:
+      - NODE_ENV=development
+      - PORT=4020
+      - MERCHANT_ADDRESS=${MERCHANT_ADDRESS:-0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055}
+    volumes:
+      - merchant_logs:/app/logs
+      - ../x402-merchant:/app:ro
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4020/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - x402-network
+    restart: unless-stopped
+
+  # x402 Research Service - Full research engine with payments
+  research:
+    build:
+      context: ../x402-research-service
+      dockerfile: Dockerfile
+    container_name: x402-research
+    ports:
+      - "4021:4020"
+    environment:
+      - NODE_ENV=development
+      - PORT=4020
+      - WALLET_PRIVATE_KEY=${WALLET_PRIVATE_KEY}
+      - BASE_RPC_URL=${BASE_RPC_URL:-https://mainnet.base.org}
+      - SERPER_API_KEY=${SERPER_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - RATE_LIMIT_WINDOW_MS=60000
+      - RATE_LIMIT_MAX=30
+    volumes:
+      - research_logs:/app/logs
+      - research_state:/app/state
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4020/status', (r) => process.exit(r.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - x402-network
+    restart: unless-stopped
+    depends_on:
+      merchant:
+        condition: service_healthy
+
+  # Optional: Redis for caching (can be enabled for production-like setup)
+  redis:
+    image: redis:7-alpine
+    container_name: x402-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - x402-network
+    restart: unless-stopped
+    profiles:
+      - with-redis
+
+volumes:
+  merchant_logs:
+    driver: local
+  research_logs:
+    driver: local
+  research_state:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  x402-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

@@ -1,0 +1,18 @@
+{
+  "name": "CLAUDIA Autonomous Orchestrator",
+  "version": "1.0",
+  "timeoutMinutes": 15,
+  "checkIntervalMinutes": 5,
+  "maxWaitForUser": 900,
+  "continueOnTimeout": true,
+  "tokenBudget": {
+    "dailyTarget": 500000,
+    "hourlyMax": 50000,
+    "costPerSession": 0.005
+  },
+  "activeTasks": [],
+  "waitingForUser": false,
+  "userLastSeen": "2026-02-03T23:09:19Z",
+  "nextAction": "autonomous_work",
+  "lastAutonomousRun": "2026-02-02T16:21:16Z"
+}

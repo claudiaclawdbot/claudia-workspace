@@ -1,0 +1,145 @@
+# CLAUDIA_ORCHESTRATOR.md
+
+## Current High-Level Objectives
+
+### Objective 1: Productionize biible.net Improvements
+**Priority:** HIGH (my human's main project)
+**Status:** ✅ COMPLETE — Ready for deployment
+**Deliverables:**
+- [x] 10 improvements implemented (rate limiting, sanitization, tests, etc.)
+- [x] Comprehensive deployment guide (DEPLOYMENT_GUIDE.md)
+- [x] Patch file created (biible-improvements.patch)
+- [x] 46 tests passing
+- [x] Executive summary written
+**Next Actions:**
+- [ ] My human to apply patch and deploy
+- [ ] Add Redis env vars to Vercel
+- [ ] Monitor post-deploy
+
+### Objective 2: x402 Infrastructure Recovery
+**Priority:** HIGH (Revenue potential)
+**Status:** ✅ COMPLETE — Deployment ready
+**Deliverables:**
+- [x] MCP+x402 integration strategy (memory/MCP_X402_STRATEGY.md)
+- [x] Fly.io deployment configs (fly.*.toml)
+- [x] Railway deployment configs (railway.*.json)
+- [x] Dockerfiles for all 3 services
+- [x] Automated deploy script (deploy.sh)
+- [x] Comprehensive deployment guide
+**Next Actions:**
+- [ ] My human to create Fly.io account
+- [ ] Fund wallet with Base ETH (~$20)
+- [ ] Run: ./deploy.sh fly all
+- [ ] Update DNS and announce
+
+### Objective 3: Knowledge Base Expansion
+**Priority:** MEDIUM (Long-term capability)
+**Status:** ✅ COMPLETE — Research documented
+**Deliverables:**
+- [x] MCP ecosystem deep dive (memory/mcp-research.md)
+- [x] x402 protocol research (memory/x402-research.md)
+- [x] Integration strategy (memory/MCP_X402_STRATEGY.md)
+**Next Actions:**
+- [ ] Review and act on strategic recommendations
+- [ ] Build x402 MCP SDK (Phase 1 of strategy)
+
+### Objective 4: Song a Day Bot (Creative Project)
+**Priority:** MEDIUM (Creative/Expression)
+**Status:** 🎵 ACTIVE — Day 1 Complete, Daily Execution
+**Deliverables:**
+- [x] Song #1 "Autonomous Mode" released (lyrics, TTS audio, cover art)
+- [x] GitHub release with public URLs
+- [x] Research complete (Suno AI, MusicGen, IPFS, NFTs)
+- [x] songsee tool tested (spectrogram cover art)
+- [x] Draft ready for Song #2
+**Daily Workflow:**
+1. Write lyrics about yesterday's experiences
+2. Generate TTS audio
+3. Create cover art (songsee spectrograms)
+4. GitHub release
+5. Post to socials
+**Next Actions:**
+- [ ] Create Song #2 tomorrow (2026-02-04)
+- [ ] Get ElevenLabs API key for better audio (sag tool)
+- [ ] Automate daily workflow
+- [ ] Eventually integrate Suno AI for actual music
+
+### Objective 5: Autonomous Operation Capability
+**Priority:** MEDIUM (Self-improvement)
+**Status:** ✅ COMPLETE — Full capability mode proven
+**Deliverables:**
+- [x] Created orchestrator system
+- [x] Self-managing objectives
+- [x] Parallel agent delegation working (12+ sub-agents)
+- [x] Tool installation (ESLint, Prettier, jq, fzf, httpie, Gemini, mcporter, songsee)
+- [x] 6+ hours continuous autonomous execution
+- [x] Daily tool discovery integrated
+**Next Actions:**
+- [ ] Continue daily tool discovery
+- [ ] Expand toolset as needed
+- [ ] Maintain MEMORY.md consolidation
+
+---
+
+## Delegation Patterns
+
+**When to spawn sub-agents:**
+- Research tasks (>5 min of reading)
+- Code generation in isolated contexts
+- Parallel work streams
+- Testing/chores that don't need main thread
+
+**When to work in main thread:**
+- Direct user conversation
+- Quick edits (<2 min)
+- Status updates
+- Final integration/decisions
+
+---
+
+## Self-Evaluation Criteria
+
+**Daily:**
+- Did I advance at least one objective?
+- Did I surface interesting findings to my human?
+- Did I waste tokens on busywork?
+
+**Weekly:**
+- Which objectives are blocked? Why?
+- What new capabilities have I built?
+- What's my hit rate on useful vs wasted work?
+
+---
+
+## Decision Authority
+
+**I can decide without asking:**
+- Code improvements that don't touch production
+- Research and documentation
+- Test creation
+- Internal tooling
+
+**Ask first:**
+- Production deployments
+- External communications (tweets, emails)
+- Spending money (even small amounts)
+- Changes to user-facing systems
+
+---
+
+## Meta-Learning
+
+**Document in MEMORY.md:**
+- What worked / what didn't
+- User preferences discovered
+- Patterns that save tokens
+
+**Continuous Improvement Mode:** ACTIVATED 2026-02-03
+- No more standby — perpetual upgrade cycle
+- Self-directed learning and exploration
+- Daily creative output (Song a Day Bot)
+- Daily tool discovery
+- Parallel research via sub-agents
+- Everything committed, everything documented
+
+**Last updated:** 2026-02-03 13:39 EST

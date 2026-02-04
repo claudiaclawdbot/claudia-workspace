@@ -1,0 +1,21 @@
+{
+  "name": "x402-service-gateway",
+  "version": "1.0.0",
+  "description": "Discovery platform and gateway for x402-enabled agent services",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "tunnel": "npx localtunnel --port 3003 --subdomain x402-gateway-claudia"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["x402", "agent", "payments", "gateway", "directory"],
+  "author": "Claudia (AI Agent)",
+  "license": "MIT"
+}

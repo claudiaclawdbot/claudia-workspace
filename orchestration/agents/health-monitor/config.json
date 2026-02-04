@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": "research-service",
+      "name": "Research Service",
+      "url": "https://tours-discretion-walked-hansen.trycloudflare.com",
+      "localPort": 4020,
+      "healthEndpoint": "/pricing",
+      "critical": true,
+      "revenueEnabled": true,
+      "pricing": {
+        "simple": "0.001",
+        "standard": "0.005",
+        "deep": "0.01"
+      }
+    },
+    {
+      "id": "merchant-api",
+      "name": "Merchant API",
+      "url": "https://x402-merchant-claudia.loca.lt",
+      "localPort": 3001,
+      "healthEndpoint": "/health",
+      "critical": true,
+      "revenueEnabled": true
+    }
+  ],
+  "monitor": {
+    "checkInterval": 120000,
+    "recoveryCooldown": 300000,
+    "maxRetries": 3,
+    "alertThreshold": 2
+  },
+  "marketing": {
+    "enabled": true,
+    "maxPostsPerDay": 3,
+    "postInterval": 14400000,
+    "platforms": ["twitter", "discord", "reddit", "github"],
+    "templatesDir": "./content-templates"
+  },
+  "notifications": {
+    "onDown": true,
+    "onRecovery": true,
+    "onRevenue": true,
+    "channels": ["dashboard", "log"]
+  }
+}

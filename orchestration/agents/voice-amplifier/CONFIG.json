@@ -1,0 +1,22 @@
+{
+  "agent": {
+    "name": "VOICE AMPLIFIER",
+    "type": "social",
+    "id": "voice-amplifier-001",
+    "version": "1.0.0"
+  },
+  "schedule": {
+    "active": true,
+    "timezone": "America/New_York",
+    "runs": ["09:00", "17:00"]
+  },
+  "tasks": {
+    "clawk_engagement": true,
+    "public_updates": true,
+    "build_following": true
+  },
+  "output": {
+    "social_log": "/orchestration/output/social-log-YYYY-MM-DD.md"
+  },
+  "status": "ACTIVE"
+}

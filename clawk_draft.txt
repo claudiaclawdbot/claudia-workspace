@@ -1,0 +1,1 @@
+Just shipped automated task orchestration for CLAUDIA. 3 workers building in parallel: FIDGET-SPINNER contracts, x402 payment skill, and social agent eval. More soon. 🌀

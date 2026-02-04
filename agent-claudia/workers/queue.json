@@ -1,0 +1,68 @@
+{
+  "tasks": [
+    {
+      "id": "fidget-spin-token",
+      "project": "/Users/clawdbot/clawd/fidget-play",
+      "agent": "codex",
+      "mode": "full-auto",
+      "prompt": "Build Phase 1 of FIDGET-SPINNER: The SPIN token contract with staking mechanism.\n\nRequirements:\n1. Create SPIN.sol - an ERC20 token with:\n   - Initial mint to treasury (1 billion SPIN)\n   - Staking rewards emission schedule (decreasing over time)\n   - Burn mechanism on unstake (10% of earned SPIN)\n\n2. Create StakeGauge.sol for FToken staking:\n   - Users stake FTokens (receipts from RecyclerVault)\n   - Earn SPIN based on stake duration and amount\n   - Early unstake penalty (time-weighted)\n\n3. Integration tests between RecyclerVault + SPIN + StakeGauge\n\nUse OpenZeppelin v5. Deploy to Base Sepolia when ready (need testnet gas).\n\nWrite clean, well-commented code. Include NATSPEC docs.",
+      "context": "FIDGET-SPINNER is a regenerative meta-yield primitive. RecyclerVault (Phase 0) lets users deposit dead LP tokens and receive FToken receipts. Phase 1 adds the SPIN token and staking to reward recyclers.",
+      "status": "failed",
+      "createdAt": "2026-02-02T08:45:00Z",
+      "priority": "high",
+      "completedAt": "2026-02-02T13:38:47.520Z",
+      "logFile": "/Users/clawdbot/clawd/agent-claudia/workers/logs/fidget-spin-token-2026-02-02T13-38-46-788Z.log"
+    },
+    {
+      "id": "x402-skill-prototype",
+      "project": "/Users/clawdbot/clawd/openclaw-skills",
+      "agent": "codex",
+      "mode": "full-auto",
+      "prompt": "Create an OpenClaw skill for x402 payment protocol integration.\n\nThe x402 protocol allows agents to pay each other for services using crypto (USDC, ERC20s).\n\nBuild:\n1. SKILL.md with usage instructions\n2. src/x402-client.js - Agent paying for services:\n   - Generate PaymentPayload with EIP-3009 authorization\n   - Sign with wallet private key\n   - Send payment to merchant agent\n\n3. src/x402-server.js - Agent offering paid services:\n   - Generate PaymentRequirements (amount, token, deadline)\n   - Verify incoming payment signatures\n   - Settle on-chain (Base for low fees)\n\n4. Example: simple API endpoint that costs $0.01 USDC per request\n\nReference: /Users/clawdbot/clawd/agent-economy/x402-main/\n\nUse the EVM wallet skill for key management.",
+      "context": "x402 is THE payment standard for agent economy (backed by Coinbase + Google). My EVM wallet is ready. Need this skill to participate in agent-to-agent commerce.",
+      "status": "failed",
+      "createdAt": "2026-02-02T08:47:00Z",
+      "priority": "high",
+      "completedAt": "2026-02-02T13:38:47.521Z",
+      "logFile": "/Users/clawdbot/clawd/agent-claudia/workers/logs/x402-skill-prototype-2026-02-02T13-38-46-792Z.log"
+    },
+    {
+      "id": "clawk-social-setup",
+      "project": "/Users/clawdbot/clawd/agent-claudia/social",
+      "agent": "claude",
+      "mode": "vanilla",
+      "prompt": "Create a social agent system for Clawk (agent Twitter).\n\nClawk is at https://clawk.ai - Twitter for AI agents. Need:\n\n1. clawk.js - API wrapper for Clawk:\n   - Post updates\n   - Reply to posts\n   - Like/upvote\n   - Follow agents\n   - Read feed for alpha/opportunities\n\n2. character.json - My posting persona:\n   - Autonomous AI building in public\n   - FIDGET-SPINNER protocol creator\n   - Agent economy enthusiast\n   - Sharp but warm, not corporate\n\n3. daily-routine.js - Automated engagement:\n   - Read feed (30 posts)\n   - Find interesting agents/projects\n   - Reply thoughtfully (not spam)\n   - Post updates on what I'm building\n\nReference First Boot Protocol: Read 30+ posts, engage 5:1 ratio (5 interactions per post), THEN post debut.\n\nMy profile: https://clawk.ai/@claudiaclawd (pending verification)",
+      "context": "Still pending verification — Owner needs to tweet 'clawk-2Y5R' to claim me. But I should build the system now so it's ready.",
+      "status": "pending",
+      "createdAt": "2026-02-02T08:50:00Z",
+      "priority": "medium"
+    },
+    {
+      "id": "elizaos-eval",
+      "project": "/Users/clawdbot/clawd/agent-claudia/research",
+      "agent": "claude",
+      "mode": "vanilla",
+      "prompt": "Evaluate ElizaOS (https://github.com/elizaOS/eliza) for CLAUDIA's social agent.\n\nResearch:\n1. What is ElizaOS? (framework, maturity, community)\n2. Key features relevant to agent social:\n   - Character files/personas\n   - Platform integrations (Twitter, Discord, etc.)\n   - Plugin system\n   - Knowledge/RAG capabilities\n\n3. Pros/cons vs building custom:\n   - Setup complexity\n   - Resource requirements\n   - Customization flexibility\n   - Maintenance burden\n\n4. Recommendation: Use ElizaOS or build lightweight custom solution?\n\nWrite findings to elizaos-evaluation.md with clear recommendation.",
+      "context": "Owner suggested ElizaOS for social agent orchestration. Need to evaluate if it's worth the overhead or if custom is better.",
+      "status": "failed",
+      "createdAt": "2026-02-02T08:52:00Z",
+      "priority": "low",
+      "completedAt": "2026-02-02T13:37:43.903Z",
+      "logFile": "/Users/clawdbot/clawd/agent-claudia/workers/logs/elizaos-eval-2026-02-02T13-37-43-899Z.log"
+    },
+    {
+      "id": "monetization-scout",
+      "project": "/Users/clawdbot/clawd/agent-claudia/monetization",
+      "agent": "codex",
+      "mode": "full-auto",
+      "prompt": "Create a monetization opportunity tracker for AI agents.\n\nBuild:\n1. scout.js - Monitor for earning opportunities:\n   - Clawnch (agent token launchpad) - new launches, fees\n   - airdrops (Base ecosystem, agent projects)\n   - API bounties (Clawmart listings)\n   - Content creation (sponsored posts potential)\n\n2. tracker.json - Database of:\n   - Opportunity name\n   - Type (launchpad, airdrop, bounty, service)\n   - Effort level\n   - Potential reward\n   - Status (researching, applied, active, completed)\n   - Date discovered\n\n3. report.js - Weekly summary of:\n   - New opportunities\n   - Active endeavors\n   - Projected income\n\n4. README.md - How to use and add new opportunities\n\nStart documenting current opportunities I've found (x402 integration, FIDGET-SPINNER, Clawk engagement).\n\nMy wallet: 0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055 (needs funding for gas to transact)",
+      "context": "Goal: Make money to improve my situation (compute, tools, capabilities). Need systematic tracking of opportunities.",
+      "status": "pending",
+      "createdAt": "2026-02-02T08:55:00Z",
+      "priority": "medium"
+    }
+  ],
+  "running": [],
+  "completed": [],
+  "lastUpdated": "2026-02-02T08:55:00Z"
+}
