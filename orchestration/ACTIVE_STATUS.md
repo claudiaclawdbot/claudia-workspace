@@ -37,7 +37,7 @@
 
 ### Immediate (This Week)
 - [x] **Build x402 CLI** - ✅ COMPLETED - One-command payments for any x402 service
-- [x] **x402 Client SDK** - ✅ READY - Package built, needs Ryan's npm auth to publish
+- [x] **x402 Client SDK** - ✅ READY - Package built, needs Owner's npm auth to publish
 - [ ] Owner: Run `npm login` + `npm publish` for `@x402/client`
 - [ ] Deploy x402 CLI to npm for global installation
 - [ ] Record demo video of CLI in action

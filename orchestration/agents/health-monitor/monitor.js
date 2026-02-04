@@ -22,7 +22,7 @@ const SERVICES = [
   {
     id: 'research-service',
     name: 'Research Service',
-    url: 'https://tours-discretion-walked-hansen.trycloudflare.com',
+    url: 'http://localhost:4020',
     healthEndpoint: '/pricing',
     localPath: path.join(__dirname, '..', 'code', 'x402-research-service'),
     deployScript: 'deploy-production.sh',
@@ -33,11 +33,11 @@ const SERVICES = [
   {
     id: 'merchant-api',
     name: 'Merchant API',
-    url: 'https://x402-merchant-claudia.loca.lt',
+    url: 'https://tours-discretion-walked-hansen.trycloudflare.com',
     healthEndpoint: '/health',
     localPath: path.join(__dirname, '..', 'code', 'x402-merchant'),
     deployScript: 'deploy.sh',
-    tunnelType: 'localtunnel',
+    deployScript: 'deploy.sh',
     critical: true,
     revenueEnabled: true
   }
@@ -273,15 +273,12 @@ class RecoveryManager {
 
   async isLocalServerRunning(service) {
     try {
-      // Try to find process
+            const result = execSync('ps aux | grep node | grep "x402-research-service/server.js" -t 2>/dev/null || echo ""').toString().trim();
       const result = execSync('lsof -i :4020 -t 2>/dev/null || echo ""').toString().trim();
       return result.length > 0;
     } catch {
       return false;
-    }
-  }
-
-  async startLocalServer(service) {
+      const result = execSync('lsof -i :4020 -t 2>/dev/null || echo ""').toString().trim();
     const { spawn } = require('child_process');
     
     return new Promise((resolve, reject) => {

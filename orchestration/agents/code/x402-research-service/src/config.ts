@@ -36,7 +36,7 @@ function validateConfig(): ServiceConfig {
   }
 
   return {
-    port: parseInt(process.env.PORT || '4020', 10),
+    port: parseInt(process.env.RESEARCH_PORT || '4020', 10),
     environment: (process.env.NODE_ENV as 'development' | 'production') || 'development',
     wallet: {
       privateKey,

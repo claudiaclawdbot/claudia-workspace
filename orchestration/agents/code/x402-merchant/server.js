@@ -480,7 +480,7 @@ export default app;
 
 // Start server if running locally (not on Vercel)
 if (!process.env.VERCEL) {
-  const PORT = process.env.PORT || 4020;
+  const PORT = process.env.PORT || 4021;
   app.listen(PORT, () => {
     console.log('╔════════════════════════════════════════════════════════╗');
     console.log('║     x402 Merchant - Agent Intel as a Service           ║');
