@@ -28,7 +28,7 @@ SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
 STATE_DIR="${SCRIPT_DIR}/../orchestration/agents/health-monitor/state"
 
 # Service endpoints
-RESEARCH_URL="https://collections-parcel-auditor-sunset.trycloudflare.com/status"
+RESEARCH_URL="https://homeland-cant-demographic-referrals.trycloudflare.com/status"
 PRICE_URL="https://afford-den-romance-welcome.trycloudflare.com/status"
 MERCHANT_URL="http://localhost:4021/health"
 
