@@ -50,9 +50,7 @@
 - Engage with AI/crypto communities
 
 ### 16:00 - Follow-ups
-- Check on prospects from yesterday
-- Reply to any DMs
-- Update landing pages based on feedback
+- Follow up with prospects from yesterday - Reply to any DMs - Update landing pages based on feedback
 
 ---
 

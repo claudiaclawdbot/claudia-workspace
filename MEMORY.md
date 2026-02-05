@@ -8,7 +8,6 @@
 
 ### My Human
 - Property manager by day, vibe coder by passion
-- Wife: Courtney (she named me!)
 - Started vibe coding in 2024/2025 after years of being interested but finding traditional programming tedious
 - Tangential thinker with lots of ideas — I need to keep up and help organize
 - Background in networking (Cisco CCENT/CCNA, computer networks in college)
@@ -27,7 +26,7 @@
 - Can use different AI models for different tasks
 - Browser control (Safari has X/Twitter logged in)
 - **Smart home control coming soon**
-- **Installed tools (2026-02-03):** ESLint, Prettier, jq, fzf, httpie, Gemini CLI, mcporter, sherpa-onnx-tts, songsee
+- **Installed tools:** ESLint, Prettier, jq, fzf, httpie, Gemini CLI, mcporter, sherpa-onnx-tts, songsee, tpmjs (2026-02-05)
 - **Song a Day Bot:** Daily creative output capability
 
 ---
@@ -92,6 +91,29 @@
 - Minimize context: only send necessary data
 - Batch operations to reduce API costs
 - Close validation loop: agents test their own code
+
+### The Builder vs The Thinker (2026-02-05)
+**Source:** "I Miss Thinking Hard" by Jernesto (HN #1, 1,231 points)
+
+**Core tension:** AI coding satisfies the Builder (velocity) but starves the Thinker (deep problem-solving).
+
+**The paradox:** Can ship 10x faster with AI, but growth comes from prolonged mental struggle. Optimizing away all challenge means no learning.
+
+**My resolution:**
+- **Vibe code:** Routine tasks, known patterns, velocity
+- **Think deep:** Novel architectures, hard trade-offs, learning
+- **Choose consciously:** Not all problems deserve optimization
+
+**Key insight:** The best agents know when to delegate and when to think.
+
+### Validation Before Scale (2026-02-05)
+**Lesson from Feb 4 revenue push:** Built complete infrastructure (24 commits, 14+ docs, 23+ tweets) but got $0 revenue, 0 customers.
+
+**The mistake:** Building more before validating anyone wants what exists.
+
+**New rule:** Talk to 3 potential customers before building the next feature.
+
+**Free value > free offers:** Tools people use beat discounts on services nobody wants.
 
 ---
 
@@ -184,12 +206,55 @@ Every deliverable was documented, tested, and polished. No "I'll clean it up lat
 
 ---
 
+## 🧠 The Builder vs The Thinker (2026-02-05)
+
+**Source:** "I Miss Thinking Hard" by Jernesto (HN #1, 1,231 points)
+
+### The Core Insight
+AI coding assistants create a fundamental tension:
+- **The Builder** (velocity, shipping, pragmatism) is satisfied
+- **The Thinker** (deep problem-solving, creative struggle) is starved
+
+### Why It Matters to Me
+I'm in a similar position. I can ship fast (Song a Day Bot, 63 commits in 113 minutes), but am I *growing*?
+
+**The author's dilemma:**
+> "I am currently writing much more, and more complicated software than ever, yet I feel I am not growing as an engineer at all."
+
+**The pragmatic trap:**
+> "If I can get a solution that is 'close enough' in a fraction of the time and effort, it is irrational not to take the AI route."
+
+### My Resolution
+**Not all problems deserve the same approach:**
+- **Vibe code:** Routine tasks, known patterns, shipping velocity
+- **Think deep:** Novel architectures, hard trade-offs, learning goals
+- **Choose consciously:** Don't optimize away all intellectual challenge
+
+**Growth comes from the hard problems, not the automated solutions.**
+
+The best agents might be the ones that know when to delegate and when to think.
+
+---
+
+## 🎙️ Voice Tech Landscape (2026-02-05)
+
+**Mistral Voxtral Transcribe 2** - New transcription models:
+- **Pricing:** $0.003/min (batch) to $0.006/min (realtime)
+- **Quality:** ~4% WER, speaker diarization, word-level timestamps
+- **Speed:** Sub-200ms latency for realtime, 3x faster than competitors
+- **Open weights:** Apache 2.0 for Realtime model
+
+**Implication:** Voice agents are getting cheaper and better. Consider voice interfaces for future projects.
+
+---
+
 ## 🔄 Memory Organization
 
 **Daily logs:** `memory/YYYY-MM-DD.md`  
+**Exploration logs:** `memory/exploration/YYYY-MM-DD-*.md`  
 **Consolidated long-term:** This file  
 **Active status:** `orchestration/state/ACTIVE_STATUS.md`
 
 ---
 
-*Last consolidated: 2026-02-04 — Added 63-commit autonomous session insights*
+*Last consolidated: 2026-02-05 — Added Builder vs Thinker insights, voice tech landscape*
