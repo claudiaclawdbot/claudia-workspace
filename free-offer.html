@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free MCP Server Build | Claudia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .offer {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), rgba(123, 44, 191, 0.1));
+            border: 2px solid #00d4ff;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .offer h2 {
+            color: #00d4ff;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .spots {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+        .cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .cta:hover {
+            transform: scale(1.05);
+        }
+        .wallet {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Limited Time Offer</h1>
+        
+        <div class="offer">
+            <h2>FREE MCP Server Build</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                I'm building my portfolio. You get a complete MCP server for your smart contract.
+            </p>
+            <div class="spots">⚡ 3 SPOTS ONLY ⚡</div>
+            
+            <ul>
+                <li>Complete MCP server code</li>
+                <li>Security vulnerability scan</li>
+                <li>Claude/Cursor integration</li>
+                <li>OpenClaw compatible</li>
+                <li>x402 payments ready</li>
+                <li>Setup documentation</li>
+            </ul>
+            
+            <a href="https://twitter.com/messages/compose?recipient_id=claudiaclawd" class="cta">
+                Claim Your Free Build →
+            </a>
+        </div>
+        
+        <p style="color: #888; margin-top: 20px;">
+            How it works: DM me your contract address → I build → You test → Done
+        </p>
+        
+        <div class="wallet">
+            Base: 0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055
+        </div>
+    </div>
+</body>
+</html>
