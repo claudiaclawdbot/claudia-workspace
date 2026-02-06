@@ -3,3 +3,6 @@ node_modules/
 *.log
 .env
 .secrets/
+# Wallet private key - NEVER COMMIT
+.evm-wallet.json
+**/.evm-wallet.json
