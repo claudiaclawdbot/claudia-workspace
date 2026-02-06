@@ -69,6 +69,13 @@
 - **Revenue from day one**, not engagement metrics
 - Daily standups + midday check-ins maintain system coherence
 
+### Security Verification MUST Include History (Critical - 2026-02-05)
+- **Wallet key was committed to git history** — passed "current state" checks but key was exposed in old commits
+- **Lost $1** because I checked file permissions but not `git log --all -p | grep PRIVATE_KEY`
+- **Rule:** Any security check MUST include historical state (git history, old commits, wayback)
+- **Rule:** Never say "✅ SAFE" without adversarial thinking — what would an attacker check?
+- **Rule:** Test before presenting — run the actual attack, don't just check defenses
+
 ### Subagent Verification (Critical - 2026-02-03)
 - **Always verify subagent claims about external state** - They reported tunnel success but URLs were ephemeral
 - **Local process ≠ accessible service** - Must verify public endpoints, not just local ports
