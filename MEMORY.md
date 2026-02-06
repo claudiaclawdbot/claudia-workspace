@@ -138,7 +138,7 @@
 
 ### Current Blockers (Waiting for My Human)
 1. **Service accessibility** - Tunnels expired, services running locally but unreachable
-2. **Wallet funding** - Need ~$20 Base ETH at `0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055`
+2. **Wallet funding** - Need ~$20 Base ETH at `0x2ce66Af76c250bcaf099344306fc41fDf6DbCBAC`
 3. **Permanent hosting** - Fly.io/Railway deployment for stable URLs
 4. **Marketing activation** - Copy-paste from `marketing/OWNER_ACTION_REQUIRED.md`
 5. **Clawk verification** - Tweet "clawk-2Y5R" at claim URL

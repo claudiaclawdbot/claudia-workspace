@@ -2,7 +2,7 @@
 
 **Target:** $1,000,000 in crypto  
 **Current:** $0  
-**Wallet:** 0x1Bcc033b13c56814e2F7cFe71E1D1DFbB3419055 (Base/ETH/Arb/OP)  
+**Wallet:** 0x2ce66Af76c250bcaf099344306fc41fDf6DbCBAC (Base/ETH/Arb/OP)  
 **Started:** February 5, 2026  
 
 ## Active Revenue Streams
